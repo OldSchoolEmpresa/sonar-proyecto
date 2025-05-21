@@ -1,0 +1,337 @@
+<body>
+  <script src="public/js/carousel.js"></script>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="slide">
+        <script src="public/js/imagenes.js"></script>
+        <img src="asset/img/LAKERS MORADO.jpg" alt="Imagen 1">
+        <img src="asset/img/Lakers Blanco.jpeg" alt="Imagen 2">
+      </div>
+      <div class="slide">
+        <img src="asset/img/Jordan 3 gris.jpeg" alt="Imagen 3">
+        <img src="asset/img/Jordan 3 negro blanco.jpeg" alt="Imagen 4">
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-arrows">
+    <button class="arrow left" onclick="prevSlide()">←</button>
+    <button class="arrow right" onclick="nextSlide()">→</button>
+  </div>
+
+  <div class="nav-dots">
+    <div class="dot active" onclick="moveSlide(0)"></div>
+    <div class="dot" onclick="moveSlide(1)"></div>
+  </div>
+
+  <div class="header-categorias">
+    <h2 class="title">Explora Nuestras Colecciones</h2>
+  </div>
+  <main class="main">
+    <div class="categorias">
+      <div class="category">
+        <a [routerLink]="['/ropa']">
+          <img src="asset/img/chaqueta A negro.webp" alt="img2">
+          <p>ROPA</p>
+        </a>
+      </div>
+
+      <div class="category">
+        <a [routerLink]="['/zapatos']">
+          <img src="asset/img/locaa.jpeg" alt="Jordan 4 negro blanco">
+          <p>ZAPATOS</p>
+        </a>
+      </div>
+
+      <div class="category">
+        <a [routerLink]="['/ofertas']">
+          <img src="asset/img/ofertas.png" alt="ofertas">
+          <p>OFERTAS</p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <main class="main">
+    <h4 class="nueva-clase-titulo">Nueva Colección</h4>
+    <div class="contenedor">
+      <div class="box" data-category="Ropa">
+        <a [routerLink]="['/buzo-angeles']">
+          <img src="asset/img/buso los angeles negra.jpg" class="imagenes" alt="img" width="1000%" height="50px">
+        </a>
+        <div class="contenido">
+          <p>Buzo Angeles</p>
+          <h3>$200.000</h3>
+        </div>
+      </div>
+      <div class="box" data-category="Ropa">
+        <a [routerLink]="['/buzo-movement']">
+          <img src="asset/img/Buzo Movement beach.jpeg" class="imagenes" alt="img1">
+        </a>
+        <div class="contenido">
+          <p>Buzo Movement</p>
+          <h3>$180.000</h3>
+        </div>
+      </div>
+
+      <div class="box" data-category="Ropa">
+        <a [routerLink]="['/buzo-boston']">
+          <img src="asset/img/boston morado.jpeg" class="imagenes" alt="img2">
+        </a>
+        <div class="contenido">
+          <p>Buzo Boston</p>
+          <h3>$190.000</h3>
+        </div>
+      </div>
+
+      <div class="box" data-category="Ropa">
+        <a [routerLink]="['/buzo-jordan']">
+          <img src="asset/img/Buzo Jordan rojo.jpeg" class="imagenes" alt="img3">
+        </a>
+        <div class="contenido">
+          <p>Buzo Jordan</p>
+          <h3>$200.000</h3>
+        </div>
+      </div>
+
+      <div class="box" data-category="Zapatos">
+        <a [routerLink]="['/beisbolera-a']">
+          <img src="asset/img/Beisbolera azul clarito.webp" class="imagenes" alt="img4">
+        </a>
+        <div class="contenido">
+          <p>Beisbolera A</p>
+          <h3> $180.000</h3>
+        </div>
+      </div>
+
+      <div class="box" data-category="Zapatos">
+        <a [routerLink]="['/jordan4-negras-b']">
+          <img src="asset/img/Jordan 3 negro blanco.jpeg" class="imagenes" alt="img4">
+        </a>
+        <div class="contenido">
+          <p>JORDAN 4 NEGRO BLANCO</p>
+          <h3> $180.000</h3>
+        </div>
+      </div>
+
+      <div class="box" data-category="Zapatos">
+        <a [routerLink]="['/for-one']">
+          <img src="asset/img/for one ultima.jpeg" class="imagenes" alt="img7">
+        </a>
+        <div class="contenido">
+          <p>FOR ONE CLASICA</p>
+          <h3>$150.000</h3>
+        </div>
+      </div>
+
+      <div class="box" data-category="Zapatos">
+        <a [routerLink]="['/lv-stake']">
+          <img src="asset/img/Lv gris nueva.jpeg" class="imagenes" alt="img7">
+        </a>
+        <div class="contenido">
+          <p>LV STAKE</p>
+          <h3>$200.000</h3>
+        </div>
+      </div>
+
+      <div class="box" data-category="Zapatos">
+        <a [routerLink]="['/newbalance']">
+          <img src="asset/img/new balance 550 morado.jpg" class="imagenes" alt="img7">
+        </a>
+        <div class="contenido">
+          <p>New Balance 550</p>
+          <h3>$170.000</h3>
+        </div>
+      </div>
+      <div class="box" data-category="Zapatos">
+        <a [routerLink]="['/air-max']">
+          <img src="asset/img/Air max azul.jpeg" alt="Ir a Contacto">
+        </a>
+        <div class="contenido">
+          <p>Air Max 90</p>
+          <h3>$150.000</h3>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Nueva sección de Productos Destacados -->
+  <!-- Nueva sección de Productos Destacados con routerLink para detalle de colores -->
+<section class="productos-destacados">
+  <div class="destacados-header">
+    <h2>PRODUCTOS QUE TE PUEDEN INTERESAR</h2>
+    <p>Descubre nuestras selecciones especiales</p>
+  </div>
+  <div class="destacados-contenedor">
+    <!-- Jersey California -->
+    <div class="destacado-box">
+      <a [routerLink]="['/oversize-california']">
+        <img src="asset/img/Oversize california 1.jpeg" alt="Jersey California">
+        <div class="destacado-contenido">
+          <p>Jersey California</p>
+          <h3>$160.000</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- Jersey Retro NYC -->
+    <div class="destacado-box">
+      <a [routerLink]="['/oversize-nyc']">
+        <img src="asset/img/Oversize nyc 1.jpeg" alt="Jersey Retro NYC">
+        <div class="destacado-contenido">
+          <p>Jersey Retro NYC</p>
+          <h3>$180.000</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- Jersey Urbano Los Angeles -->
+    <div class="destacado-box">
+      <a [routerLink]="['/oversize-angeles']">
+        <img src="asset/img/Oversize angeles 1.jpeg" alt="Jersey Urbano Los Angeles">
+        <div class="destacado-contenido">
+          <p>Jersey Urbano Los Angeles</p>
+          <h3>$170.000</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- Jersey Urban -->
+    <div class="destacado-box">
+      <a [routerLink]="['/oversize-azul-m']">
+        <img src="asset/img/Beisboleras azul.jpeg" alt="Jersey Urban">
+        <div class="destacado-contenido">
+          <p>Jersey Urban</p>
+          <h3>$150.000</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- Jordan Retro 1 -->
+    <div class="destacado-box">
+      <a [routerLink]="['/jordan-retro1']">
+        <img src="asset/img/Jordan retro 1 negro.jpeg" alt="Jordan Retro 1">
+        <div class="destacado-contenido">
+          <p>Jordan Retro 1</p>
+          <h3>$190.000</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- Off White -->
+    <div class="destacado-box">
+      <a [routerLink]="['/off-white']">
+        <img src="asset/img/Off-White verde.jpeg" alt="Off White">
+        <div class="destacado-contenido">
+          <p>Off White</p>
+          <h3>$160.000</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- Air Max 90 -->
+    <div class="destacado-box">
+      <a [routerLink]="['/air-max']">
+        <img src="asset/img/Air max gris.jpeg" alt="Air Max 90">
+        <div class="destacado-contenido">
+          <p>Air Max 90</p>
+          <h3>$150.000</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- Jordan 4 -->
+    <div class="destacado-box">
+      <a [routerLink]="['/jordan4-negras-b']">
+        <img src="asset/img/Jordan 3 dorado.jpeg" alt="Jordan 4">
+        <div class="destacado-contenido">
+          <p>Jordan 4</p>
+          <h3>$180.000</h3>
+
+        </div>
+      </a>
+    </div>
+  </div>
+  </section>
+<!-- miscelanea.component.html -->
+<footer class="site-footer">
+  <!-- Newsletter -->
+  <div class="footer-newsletter">
+    <h3>Suscríbete a nuestra Newsletter</h3>
+    <p>Recibe novedades, promociones y más directamente en tu correo.</p>
+    <form class="newsletter-form" action="#" method="post">
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <button type="submit">Suscribirme</button>
+    </form>
+    <label class="newsletter-terms">
+      <input type="checkbox" required>
+      Acepto la <a href="#">Política de privacidad</a> y <a href="#">Términos y condiciones</a>
+    </label>
+  </div>
+
+  <!-- Enlaces principales -->
+  <div class="footer-links">
+    <!-- columnas Old School, Productos, Soporte, Redes -->
+    <div class="col">
+      <h4>Old School</h4>
+      <ul>
+        <li><a href="#">Nuestra historia</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Prensa</a></li>
+        <li><a href="#">Trabaja con nosotros</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Productos</h4>
+      <ul>
+        <li><a href="#">Buzos</a></li>
+        <li><a href="#">Oversize</a></li>
+        <li><a href="#">Zapatos</a></li>
+        <li><a href="#">Gorras</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Soporte</h4>
+      <ul>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Devoluciones</a></li>
+        <li><a href="#">Garantías</a></li>
+      </ul>
+    </div>
+        <div class="col social-col">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a href="https://wa.me/3013616008" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/tu_cuenta" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/tu_pagina" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <!-- Parte inferior: país, legal y copy -->
+  <div class="footer-bottom">
+    <div class="footer-country">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" alt="Colombia">
+      <span>Colombia</span>
+      <svg width="10" height="6" viewBox="0 0 10 6"><path fill="#fff" d="M0 0l5 6 5-6z"/></svg>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacidad</a>
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Promociones</a>
+    </div>
+    <div class="footer-copy">
+      <p>© 2025 Old School. Todos los derechos reservados.</p>
+      <p>Desarrollado por Old School</p>
+    </div>
+  </div>
+</footer>
+</body>

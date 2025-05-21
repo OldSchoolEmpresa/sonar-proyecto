@@ -1,0 +1,19 @@
+/* src/styles.css */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  app-product-list {
+    flex: 2;
+    margin-right: 20px;
+  }
+  
+  app-cart {
+    flex: 1;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+  }
+  

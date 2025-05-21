@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="public/js/imagenes.js"></script>
+    <title>Producto - Tennis lv stake</title>
+</head>
+
+<body>
+    <header>
+        <h1>Old School</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inico</a></li>
+                <li><a href="zapatos.html">Zapatos</a></li>
+                <li><a href="Ofertas.html">Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="product-container">
+            <div class="product-images">
+                <img src="asset/img/chaqueta A negro.webp" alt="Vista frontal del buso" class="main-image" id="mainImage">
+                <div class="thumbnail-images">
+                    <img src="asset/img/chaqueta A negro.webp" alt="Vista lateral del buso" onclick="changeImage(this)">
+                    <img src="asset/img/chaqueta A rojo.webp" alt="Vista de perfil del buso" onclick="changeImage(this)">
+                    <img src="asset/img/chaqueta A verde.webp" alt="Vista en detalle del buso" onclick="changeImage(this)">
+                   
+                </div>
+            </div>
+            <div class="product-details">
+                <a href="/miscelanea" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    Volver atrás
+                </a>
+                <h2>Chaqueta A </h2>
+                <p class="price">
+                    <span class="discounted-price">$200.000</span>
+                </p>
+                <div class="color-options">
+                    <p>Color:</p>
+                    <button class="color-option" style="background-color: #000000;"></button>
+                    <button class="color-option" style="background-color: #d81d1d;"></button>
+                    <button class="color-option" style="background-color: #007e06;"></button>
+                </div>
+                <div class="size-options">
+                    <p>Talla:</p>
+                    <button class="size-option"></button>
+                    <button class="size-option"></button>
+                    <button class="size-option"></button>
+                    <button class="size-option"></button>
+                </div>
+                <a class="add-to-cart" href="/ventas-chaqueta-a">
+                    <i class="fas fa-credit-card"></i> COMPRAR
+                </a>  
+                <div class="additional-info">
+                    <p href="#">Da un paso adelante con estos tenis, donde la estética urbana se encuentra con la
+                        comodidad total.
+                        Perfectos para quienes buscan un look audaz y un movimiento sin límites.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

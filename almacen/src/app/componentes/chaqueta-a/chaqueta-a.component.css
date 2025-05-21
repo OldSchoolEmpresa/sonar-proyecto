@@ -1,0 +1,183 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://previews.123rf.com/images/pakhnyushchyy/pakhnyushchyy1402/pakhnyushchyy140200326/25829501-fondo-gris-dise%C3%B1o-de-textura-de-fondo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.main-image:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.thumbnail-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.thumbnail-images img:hover {
+    border: 2px solid #333;
+}
+
+.product-details {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.product-details h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.discounted-price {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.color-options,
+.size-options {
+    margin-bottom: 20px;
+}
+
+.color-option,
+.size-option {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.color-option {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.add-to-cart:hover {
+    background-color: #ee0c0c;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;  /* Ajusta según sea necesario */
+    right: 20px; /* Ajusta según sea necesario */
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Para que esté por encima de otros elementos */
+}
+
+.back-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.back-button svg {
+    margin-right: 8px;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buzo Movement</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script defer src="public/js/carrito.js"></script>
+  <script defer src="public/js/gorras.js"></script>
+  <script src="public/js/imagenes.js"></script>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- Sidebar carrito -->
+  <aside id="cart-sidebar" class="cart-closed">
+    <header class="cart-header">
+      <h2>Tu carrito</h2>
+      <button id="btn-close-cart" class="cart-close">×</button>
+    </header>
+    <ul id="cart-items" class="cart-items"></ul>
+    <footer class="cart-footer">
+      <div class="cart-items">
+        <span>Total:</span>
+        <strong id="cart-total">0 COP</strong>
+      </div>
+      <a href="/pedido-confirmado">
+        <button id="btn-checkout" class="checkout-btn">Pagar</button>
+      </a>
+    </footer>
+  </aside>
+  <div id="cart-backdrop" class="hidden"></div>
+
+  <div class="product-container">
+    <div class="product-images">
+      <div class="thumbnails">
+        <div class="thumbnail active">
+          <img src="asset/img/Buzo Movement beach.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Buzo Movement beach.jpeg')">
+        </div>
+        <div class="thumbnail">
+          <img src="asset/img/Buzo Movement gris.jpeg" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/Buzo Movement gris.jpeg')">
+        </div>
+        <div class="thumbnail">
+          <img src="asset/img/Buzo Movement negro.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Buzo Movement negro.jpeg')">
+        </div>
+        <div class="thumbnail">
+          <img src="asset/img/Buzo Movement verde.jpeg" alt="Vista 3" onmouseenter="cambiarImagen('asset/img/Buzo Movement verde.jpeg')">
+        </div>
+       
+      </div>
+
+      <div class="main-image">
+        <img id="mainImage" class="img-full" src="asset/img/Buzo Movement beach.jpeg" alt="Buzo Los Angeles">
+      </div>
+    </div>
+
+    <div class="product-details">
+      <h1 class="product-title">Buzo Movement</h1>
+      <div class="product-price">$180.000</div>
+
+      <div class="color-options">
+        <p>Color:</p>
+        <button class="color-option" style="background-color: #f0d3ad;"></button>
+        <button class="color-option" style="background-color: #000000;"></button>
+        <button class="color-option" style="background-color: #0a793c;"></button>
+        <button class="color-option" style="background-color: #6d6d6d;"></button>
+      </div>
+
+      <div class="size-section">
+        <h3>Talla</h3>
+        <div class="size-options">
+          <div class="size-row">
+            <div class="size-option">S</div>
+            <div class="size-option">M</div>
+            <div class="size-option">L</div>
+            <div class="size-option">XL</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons-container">
+        <a class="add-to-cart" href="/ventas-movement">
+          <i class="fas fa-credit-card"></i> COMPRAR
+        </a>
+      </div>
+
+      <button class="btn-add-to-cart"
+              data-id="3"
+              data-name="Buzo Movement"
+              data-price="180000"
+              data-image="asset/img/Buzo Movement beach.jpeg"
+              data-size=""
+              data-color=""
+              data-enabled="false">
+        Agregar al carrito
+      </button>
+      <div id="selection-alert">Seleccione color y talla</div>
+
+      <div class="shipping-info">
+        <h3>Envíos a Colombia</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Envío gratuito estándar para pedidos de más de $300.000</li>
+          <li><i class="fas fa-check"></i> Más información</li>
+        </ul>
+      </div>
+      <div class="security-info">
+        <ul>
+          <li><i class="fas fa-check-square"></i> Seguridad en las compras</li>
+          <li><i class="fas fa-check-square"></i> Pago seguros</li>
+          <li><i class="fas fa-check-square"></i> Transporte seguro</li>
+          <li><i class="fas fa-check-square"></i> Servicio al cliente</li>
+        </ul>
+      </div>
+      <div class="product-description">
+        <h3>Descripción</h3>
+        <p>Perfecto para el día a día, este buzo combina comodidad y estilo. Su diseño limpio y versátil lo convierte en una prenda esencial.</p>
+        <ul class="description-list">
+          <li>Diseño urbano moderno</li>
+          <li>Material: mezcla de algodón suave</li>
+          <li>Disponible en varios colores</li>
+          <li>Ajuste relajado y cómodo</li>
+          <li>Ideal para cualquier temporada</li>
+          <li>Disponible en tallas de S a L</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div> <!-- fin page-wrapper -->
+</body>
+</html>
+
+
+

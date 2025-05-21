@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inventario - Formulario Horizontal</title>
+  <script src="public/js/inventario.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Inventario</h1>
+
+    <!-- Sección del formulario para agregar/editar productos -->
+    <div class="form-container">
+      <h2>Registrar Productos</h2>
+      <form id="formularioProducto">
+        <!-- Fila 1 -->
+        <div class="form-group">
+          <label for="idProducto">ID</label>
+          <input type="number" id="idProducto" placeholder="Ej: 1001" />
+        </div>
+
+        <div class="form-group">
+          <label for="nombreProducto">Nombre</label>
+          <input type="text" id="nombreProducto" placeholder="Nombre del producto" required />
+        </div>
+
+        <div class="form-group">
+          <label for="categoriaProducto">Categoría</label>
+          <input type="text" id="categoriaProducto" placeholder="Categoría" required />
+        </div>
+
+        <div class="form-group">
+          <label for="precioProducto">Precio</label>
+          <input type="number" id="precioProducto" placeholder="0.00" required />
+        </div>
+
+        <!-- Fila 2 -->
+        <div class="form-group">
+          <label for="stockProducto">Stock</label>
+          <input type="number" id="stockProducto" placeholder="Cantidad en inventario" required />
+        </div>
+
+        <div class="form-group">
+          <label for="vendidosProducto">Vendidos</label>
+          <input type="number" id="vendidosProducto" placeholder="Cantidad vendida" value="0" required />
+        </div>
+
+        <div class="form-group">
+          <label for="fechaLlegadaProducto">Fecha Llegada</label>
+          <input type="date" id="fechaLlegadaProducto" required />
+        </div>
+
+        <div class="form-group">
+          <label for="estadoProducto">Estado</label>
+          <select id="estadoProducto" required>
+            <option value="Disponible">Disponible</option>
+            <option value="Agotado">Agotado</option>
+          </select>
+        </div>
+
+        <!-- Botones -->
+        <div class="form-actions">
+          <button type="submit" id="btnGuardar">Guardar</button>
+          <button type="reset" id="btnCancelar" class="secondary-btn">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Sección de la tabla donde se listan los productos -->
+    <div class="table-container">
+      <h2>Listado de Productos</h2>
+      <table id="tablaProductos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Vendidos</th>
+            <th>Fecha Llegada</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se inyectarán dinámicamente las filas de productos -->
+        </tbody>
+      </table>
+      <!-- Contador de productos -->
+      <div class="product-count">
+        Total de productos: <span id="contadorProductos">0</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+

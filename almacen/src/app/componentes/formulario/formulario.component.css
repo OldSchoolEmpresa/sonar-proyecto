@@ -1,0 +1,175 @@
+/* ===========================
+   Fondo Principal y Onda
+   =========================== */
+   :host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 35px); /* Ajusta si tienes cabecera fija */
+    background: linear-gradient(135deg, #2c3e50 0%, #bdc3c7 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  :host::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.2) 0%, transparent 80%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* ===========================
+     Contenedor de la Tarjeta
+     =========================== */
+  .container-sm {
+    position: relative;
+    z-index: 2; 
+    width: 100%;
+    max-width: 450px;
+    padding: 0 20px;
+  }
+  
+  /* ===========================
+     Glassmorphism del Formulario
+     =========================== */
+  .container-sm > form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.6s ease-out;
+    position: relative;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* ===========================
+     Título
+     =========================== */
+  .form-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  
+  /* ===========================
+     Campos del Formulario
+     =========================== */
+  .mb-3 {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #fff;
+    background: rgba(255,255,255,0.3);
+    outline: none;
+  }
+  
+  /* Mensajes de error */
+  .text-danger {
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: #ffdddd;
+  }
+  
+  /* ===========================
+     Input con ojo
+     =========================== */
+  .input-group {
+    position: relative;
+  }
+  
+  .input-group .btn-outline-secondary {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.2rem;
+  }
+  
+  .input-group .btn-outline-secondary:focus {
+    box-shadow: none;
+  }
+  
+  /* ===========================
+     Botón Guardar
+     =========================== */
+  .btn.btn-primary {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #1da8f8 0%, #1ca8d3 100%);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .btn.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  }
+  
+  /* ===========================
+     Toast Alert
+     =========================== */
+  #selection-alert {
+    text-align: center;
+    color: #fff;
+    margin-top: 12px;
+    display: none;
+    font-size: 0.9rem;
+  }
+  
+  /* ===========================
+     Link Volver Atrás
+     =========================== */
+  .back-button {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .back-button:hover {
+    text-decoration: underline;
+  }
+  

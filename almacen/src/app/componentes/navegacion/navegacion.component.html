@@ -1,0 +1,87 @@
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <!-- Logo + Título + Categorías -->
+  <div class="d-flex align-items-center">
+    <a [routerLink]="['/miscelanea']">
+      <div class="logo-container">
+        <img src="asset/img/logo_prueba_222-removebg-preview.png" alt="Logo de Old School" class="logo">
+        <h1 class="page-title">OLD SCHOOL</h1>
+      </div>
+    </a>
+    
+    <!-- Categorías al lado del logo -->
+    <div class="categories-inline ms-3">
+      <a href="/gorras" class="category-link">Gorras</a>
+      <a href="/oversize" class="category-link">Oversize</a>
+    </div>
+  </div>
+
+  <!-- Iconos derecha - Más pegados a la barra -->
+  <div class="d-flex align-items-center">
+    <ul class="menu-right pe-2">
+      <li class="nav-icon">
+        <a [routerLink]="['/inicio-sesion']" class="nav-link">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li class="nav-icon">
+        <a class="nav-link" href="/carrito-compras">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li class="nav-icon">
+        <a href="https://wa.me/573013616008?text=Hola%2C%20quiero%20más%20información%20sobre%20sus%20productos." 
+           target="_blank" class="nav-link">
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler mx-2" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Menú Offcanvas -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menú</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/miscelanea">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/gorras">Gorras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categoria/camisetas-oversize">Oversize</a>
+        </li>
+      </ul>
+
+      <!-- Menú de Opciones funcional -->
+      <div class="dropdown mt-3">
+        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+          Opciones
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="/mis-compras">Mis compras</a></li>
+          <li><a class="dropdown-item" href="/inicio-sesion">Iniciar sesión</a></li>
+          <li><a class="dropdown-item" href="#" (click)="onLogout()">Cerrar sesión</a></li>
+          <li><a class="dropdown-item" href="/formulario">Registrarse</a></li>
+          <li><hr class="dropdown-divider"></li>
+        </ul>
+      </div>
+
+      <!-- Barra de búsqueda -->
+      <form class="d-flex mt-3">
+        <input class="form-control me-2" type="search" placeholder="Buscar">
+        <button class="btn btn-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>

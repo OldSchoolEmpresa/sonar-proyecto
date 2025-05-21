@@ -1,0 +1,878 @@
+/* Estilos generales */
+.ventas-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d3748;
+  background: linear-gradient(135deg, #f9fafb 0%, #edf2f7 100%);
+  min-height: 100vh;
+}
+
+h2 {
+  color: #2b6cb0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #4299e1 0%, #2b6cb0 100%);
+  border-radius: 3px;
+}
+
+h3, h4 {
+  color: #2b6cb0;
+  margin: 1.2rem 0 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Tarjeta de producto */
+.detalle-compra, .confirmacion-pedido {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detalle-compra:hover, .confirmacion-pedido:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Galería de imágenes */
+.imagen-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.controles-imagen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  pointer-events: none;
+}
+
+.btn-cambiar {
+  pointer-events: all;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: #2b6cb0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cambiar:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.puntos-navegacion {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.puntos-navegacion span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.puntos-navegacion span.activo {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+.puntos-navegacion span:hover {
+  background-color: white;
+}
+
+/* Selector de colores */
+.opciones-color {
+  margin: 1.5rem 0;
+}
+
+.colores-disponibles {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.color-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #e2e8f0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-option.selected {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #2b6cb0;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.check-icon {
+  color: white;
+  font-size: 0.8rem;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.color-tag {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 8px;
+  vertical-align: middle;
+  border: 1px solid #e2e8f0;
+}
+
+/* Formulario */
+.opciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.opciones div {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+select, input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background-color: #f8fafc;
+}
+
+select:focus, input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+/* Botones */
+button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:not(.confirmar) {
+  background-color: #e2e8f0;
+  color: #2d3748;
+}
+
+button:not(.confirmar):hover {
+  background-color: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+button i {
+  margin-right: 0.5rem;
+}
+
+.btn-continuar, .confirmar {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(66, 153, 225, 0.3);
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn-continuar:hover, .confirmar:hover {
+  background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(66, 153, 225, 0.3);
+}
+
+/* Resumen del pedido */
+.resumen-producto, .info-entrega, .datos-usuario {
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.resumen-producto img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  border: 1px solid #e2e8f0;
+}
+
+.datos-usuario div {
+  margin-bottom: 1.2rem;
+}
+
+/* Acciones */
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+/* Precio */
+.price {
+  font-weight: 700;
+  color: #2b6cb0;
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+/* Agrega esto al final de tu CSS existente */
+
+/* Diseño mejorado para la descripción del producto */
+.detalle-producto p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  background: rgba(248, 250, 252, 0.7);
+  border-left: 4px solid #4f46e5;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.detalle-producto p::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 3rem;
+  color: rgba(79, 70, 229, 0.1);
+  font-family: serif;
+  line-height: 1;
+}
+
+.detalle-producto p:hover {
+  background: rgba(248, 250, 252, 0.9);
+  transform: translateX(5px);
+}
+
+/* Contenedor de personalización mejorado */
+.personalizacion-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.personalizacion-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    #4f46e5 0%, 
+    #7c3aed 30%, 
+    #a78bfa 70%, 
+    #4f46e5 100%);
+  background-size: 200% 100%;
+  animation: gradientFlow 3s linear infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Título de personalización mejorado */
+.titulo-personalizacion {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.titulo-personalizacion h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.titulo-personalizacion h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  border-radius: 4px;
+}
+
+.titulo-personalizacion p.subtitulo {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-top: 0.8rem;
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-personalizacion p.subtitulo::before,
+.titulo-personalizacion p.subtitulo::after {
+  content: '~';
+  margin: 0 0.5rem;
+  color: #a78bfa;
+}
+
+/* Contenido de personalización */
+.contenido-personalizacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Sección de imagen mejorada */
+.imagen-seccion {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Sección de opciones mejorada */
+.opciones-seccion {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Mejoras para las opciones de selección */
+.opciones-container {
+  background: rgba(248, 250, 252, 0.7);
+  padding: 1.8rem;
+  border-radius: 14px;
+  border: 1px dashed #c7d2fe;
+  transition: all 0.3s ease;
+}
+
+.opciones-container:hover {
+  background: rgba(248, 250, 252, 0.9);
+  border-color: #a78bfa;
+  box-shadow: 0 5px 15px rgba(167, 139, 250, 0.1);
+}
+
+/* Separador decorativo */
+.separador-elegante {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(167, 139, 250, 0.5), 
+    transparent);
+  margin: 2rem 0;
+  position: relative;
+}
+
+.separador-elegante::after {
+  content: '✧';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0 1rem;
+  color: #7c3aed;
+  font-size: 1.2rem;
+}
+
+/* Botón mejorado */
+.boton-personalizacion {
+  margin-top: 2rem;
+  align-self: center;
+}
+/* Diseño premium para personalización */
+.personalizacion-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.personalizacion-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    #4f46e5 0%, 
+    #7c3aed 30%, 
+    #a78bfa 70%, 
+    #4f46e5 100%);
+  background-size: 200% 100%;
+  animation: gradientFlow 3s linear infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.titulo-personalizacion {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.titulo-personalizacion h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.titulo-personalizacion h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  border-radius: 4px;
+}
+
+.titulo-personalizacion p.subtitulo {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-top: 0.8rem;
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-personalizacion p.subtitulo::before,
+.titulo-personalizacion p.subtitulo::after {
+  content: '✧';
+  margin: 0 0.5rem;
+  color: #a78bfa;
+  font-size: 0.8rem;
+}
+
+.contenido-personalizacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.imagen-seccion {
+  flex: 1;
+  min-width: 350px;
+}
+
+.opciones-seccion {
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.producto-header {
+  margin-bottom: 2rem;
+}
+
+.producto-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1e1b4b;
+}
+
+.descripcion {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  background: rgba(248, 250, 252, 0.7);
+  border-left: 4px solid #4f46e5;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.descripcion::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 3rem;
+  color: rgba(79, 70, 229, 0.1);
+  font-family: serif;
+  line-height: 1;
+}
+
+.descripcion:hover {
+  background: rgba(248, 250, 252, 0.9);
+  transform: translateX(5px);
+}
+
+.opciones-container {
+  background: rgba(248, 250, 252, 0.7);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px dashed #c7d2fe;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+}
+
+.opciones-container:hover {
+  background: rgba(248, 250, 252, 0.9);
+  border-color: #a78bfa;
+  box-shadow: 0 5px 15px rgba(167, 139, 250, 0.1);
+}
+
+.opciones-color h4, .opcion-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.opciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.opcion-group {
+  margin-bottom: 1rem;
+}
+
+.separador-elegante {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(167, 139, 250, 0.5), 
+    transparent);
+  margin: 2rem 0;
+  position: relative;
+}
+
+.separador-elegante::after {
+  content: '✧';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0 1rem;
+  color: #7c3aed;
+  font-size: 1.2rem;
+}
+/* Agrega esto al final de tu CSS existente */
+
+/* Contenedor principal más amplio */
+.ventas-container {
+  max-width: 1200px; /* Aumenté el ancho máximo */
+  margin: 2rem auto;
+  padding: 2rem 3rem; /* Más padding lateral */
+}
+
+/* Contenedor de personalización más ancho */
+.personalizacion-container {
+  max-width: 1000px; /* Más ancho que antes */
+  margin: 0 auto;
+  padding: 3rem; /* Más espacio interno */
+}
+
+/* Diseño de dos columnas para pantallas grandes */
+.contenido-personalizacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Imagen más grande */
+.imagen-seccion .imagen-container {
+  width: 100%;
+  height: 500px; /* Más alta */
+}
+
+/* Sección de opciones más espaciada */
+.opciones-seccion {
+  padding-top: 1rem;
+}
+
+/* Ajustes para los elementos de selección */
+.opciones-container {
+  padding: 2.5rem;
+}
+
+.opciones-color, .opciones {
+  margin-bottom: 2.5rem;
+}
+
+/* Selectores más grandes */
+select, input[type="number"] {
+  padding: 1.2rem;
+  font-size: 1.1rem;
+}
+
+/* Botones más prominentes */
+.btn-continuar {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.2rem;
+}
+/* Agrega esto al final de tu CSS existente */
+
+/* Contenedor con borde morado resaltado */
+.personalizacion-container {
+  border: 2px solid #7c3aed; /* Borde morado sólido */
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2), /* Sombra exterior morada */
+              0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra normal */
+  position: relative;
+}
+
+/* Efecto de esquinas decorativas */
+.personalizacion-container::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 18px; /* Un poco menos que el contenedor para efecto */
+  pointer-events: none;
+}
+
+/* Refuerzo el borde en hover */
+.personalizacion-container:hover {
+  border-color: #6d28d9;
+  box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.2),
+              0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajusto el gradiente superior para que combine */
+.personalizacion-container::before {
+  height: 6px;
+  background: linear-gradient(90deg, 
+    #35c7f3 0%, 
+    #7c3aed 50%, 
+    #a78bfa 100%);
+}
+
+/* Ajustes para pantallas muy grandes */
+@media (min-width: 1600px) {
+  .ventas-container {
+    max-width: 1400px;
+  }
+  
+  .personalizacion-container {
+    max-width: 1200px;
+  }
+  
+  .contenido-personalizacion {
+    gap: 4rem;
+  }
+}
+
+/* Mantenemos los estilos responsive para móviles */
+@media (max-width: 768px) {
+  .contenido-personalizacion {
+    grid-template-columns: 1fr;
+  }
+  
+  .imagen-seccion .imagen-container {
+    height: 400px;
+  }
+}
+/* 1) Centrar y limitar ancho del card */
+.ventas-container .detalle-compra {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* 2) Layout de dos columnas, adaptivo */
+.ventas-container .producto-info {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .ventas-container .producto-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 3) Aumentar tamaño de la imagen */
+.imagen-container {
+  width: 100%;
+  height: 450px;
+}
+.imagen-container img {
+  object-fit: cover;
+}
+
+/* 4) Destacar bloque de descripción */
+.detalle-producto p {
+  background: rgba(248,250,252,0.8);
+  border-left: 4px solid #4f46e5;
+  padding: 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.5rem;
+}
+
+/* 5) Contenedor unificado para colores + talla + cantidad */
+.opciones-color,
+.opciones {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border: 2px dashed #c7d2fe;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s;
+}
+.opciones-color:hover,
+.opciones:hover {
+  background: #fff;
+  border-color: #a78bfa;
+  box-shadow: 0 5px 15px rgba(167,139,250,0.1);
+}
+
+/* 6) Tamaño y espaciado de select e input */
+.opciones select,
+.opciones input[type="number"] {
+  padding: 1.1rem;
+  font-size: 1.1rem;
+}
+
+/* 7) Botón “Continuar con la compra” al 100% */
+.btn-continuar {
+  display: block;
+  width: 100%;
+  padding: 1.2rem 0;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+/* 8) Puntos de navegación centrados y más grandes */
+.puntos-navegacion {
+  bottom: 10px;
+  gap: 10px;
+}
+.puntos-navegacion span {
+  width: 12px;
+  height: 12px;
+}
+
+/* 9) Ajuste responsive para la imagen en móvil */
+@media (max-width: 480px) {
+  .imagen-container { height: 300px; }
+}

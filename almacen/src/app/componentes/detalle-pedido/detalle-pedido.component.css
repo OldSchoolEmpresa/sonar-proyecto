@@ -1,0 +1,212 @@
+/***************************************************
+ * IMPORTACIÓN DE FUENTES Y RESET
+ ***************************************************/
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+ *, *::before, *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ html {
+   font-size: 16px;
+ }
+ 
+ body {
+  font-family: 'Roboto', sans-serif;
+  background: #e7edf3;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+  /* Centrado horizontal y vertical */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150vh;
+  padding-top: 90px; /* Reduje este valor de 100px a 50px para bajar menos el recuadro */
+}
+ 
+ /***************************************************
+  * CONTENEDOR GENERAL – ESTILO PREMIUM
+  ***************************************************/
+ .order-container {
+   max-width: 800px;           /* Contenedor más amplio */
+   margin: 2rem auto;
+   width: 100%;
+   background: #ffffff;
+   border-radius: 12px;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+   padding: 2rem;               /* Espacio interno mayor */
+   position: relative;
+   border: 1px solid #dce4ec;
+ }
+ 
+ /* Para centrar el contenido de la pantalla */
+ body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+ }
+ 
+ /***************************************************
+  * TÍTULO PRINCIPAL
+  ***************************************************/
+ .order-container h2 {
+   background: linear-gradient(135deg, #1c7ed6, #67b7f7);
+   color: #fff;
+   padding: 1.5rem;
+   text-align: center;
+   font-size: 2.2rem;
+   font-weight: 700;
+   border-radius: 10px;
+   margin-bottom: 2rem;
+ }
+ 
+ /***************************************************
+  * DATOS DEL PEDIDO (INFO) – TARJETAS
+  ***************************************************/
+ .order-info {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 1.5rem;
+   margin-bottom: 2rem;
+ }
+ 
+ .order-info .info-item {
+   background: #f9f9f9;
+   padding: 1.2rem 1.5rem;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+   display: flex;
+   align-items: center;
+   transition: transform 0.3s ease;
+ }
+ 
+ .order-info .info-item:hover {
+   transform: translateY(-3px);
+ }
+ 
+ .order-info .info-item strong {
+   width: 160px; /* Mayor ancho para etiquetas */
+   font-weight: 600;
+   color: #333;
+   margin-right: 0.7rem;
+ }
+ 
+ .order-info .info-item span {
+   font-size: 1rem;
+   color: #555;
+ }
+ 
+ /***************************************************
+  * LISTADO DE PRODUCTOS – TARJETAS DE PRODUCTO
+  ***************************************************/
+ .order-products ul {
+   list-style: none;
+   padding: 0;
+   margin-bottom: 2rem;
+ }
+ 
+ .order-products li {
+   background: #fcfcfc;
+   border: 1px solid #ebedf0;
+   border-radius: 10px;
+   margin-bottom: 1.5rem;
+   transition: background 0.3s ease, transform 0.3s ease;
+ }
+ 
+ .order-products li:hover {
+   background: #f4f8fc;
+   transform: translateY(-2px);
+ }
+ 
+ .product-item {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 0.7rem;
+   padding: 1.2rem;
+ }
+ 
+ .product-info {
+   display: flex;
+   align-items: center;
+ }
+ 
+ .product-info strong {
+   width: 170px; /* Ancho adecuado para resaltar los títulos de producto */
+   font-weight: 600;
+   color: #333;
+   margin-right: 0.5rem;
+ }
+ 
+ .product-info span {
+   font-size: 0.95rem;
+   color: #555;
+ }
+ 
+ /* Línea separadora entre productos */
+ .order-products li hr {
+   border: none;
+   border-top: 1px dashed #ebedf0;
+   margin: 0.7rem 1rem;
+ }
+ 
+ /***************************************************
+  * TOTAL DEL PEDIDO DESTACADO
+  ***************************************************/
+ .order-total {
+   background: #f1f7fc;
+   padding: 1.5rem 1.8rem;
+   text-align: right;
+   font-size: 1.8rem;
+   font-weight: 700;
+   color: #1c7ed6;
+   border-top: 3px solid #c1d3e0;
+   border-radius: 0 0 10px 10px;
+ }
+ 
+ /***************************************************
+  * ESTILO PARA MENSAJE DE FALTA DE DATOS
+  ***************************************************/
+ .no-data p {
+   text-align: center;
+   padding: 2rem;
+   font-size: 1.3rem;
+   color: #777;
+ }
+ 
+ /***************************************************
+  * RESPONSIVIDAD
+  ***************************************************/
+ @media (max-width: 768px) {
+   .order-container {
+     margin: 1rem;
+     padding: 1rem;
+   }
+   
+   .order-container h2 {
+     font-size: 1.8rem;
+     padding: 1rem;
+   }
+   
+   .order-info {
+     grid-template-columns: 1fr;
+   }
+   
+   .order-info .info-item strong {
+     width: 130px;
+     font-size: 0.95rem;
+   }
+   
+   .product-info strong {
+     width: 130px;
+   }
+   
+   .order-total {
+     font-size: 1.5rem;
+     padding: 1rem 1rem;
+   }
+ }
+ 

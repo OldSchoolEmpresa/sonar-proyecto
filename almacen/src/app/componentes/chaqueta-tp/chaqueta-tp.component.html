@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Producto - TP Streetwear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script defer src="public/js/carrito.js"></script>
+  <script defer src="public/js/gorras.js"></script>
+  <script src="public/js/imagenes.js"></script>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- Sidebar carrito -->
+  <aside id="cart-sidebar" class="cart-closed">
+    <header class="cart-header">
+      <h2>Tu carrito</h2>
+      <button id="btn-close-cart" class="cart-close">×</button>
+    </header>
+    <ul id="cart-items" class="cart-items"></ul>
+    <footer class="cart-footer">
+      <div class="cart-items">
+        <span>Total:</span>
+        <strong id="cart-total">0 COP</strong>
+      </div>
+      <a href="/pedido-confirmado">
+        <button id="btn-checkout" class="checkout-btn">Pagar</button>
+      </a>
+    </footer>
+  </aside>
+  <div id="cart-backdrop" class="hidden"></div>
+
+  <div class="product-container">
+    <div class="product-images">
+      <div class="thumbnails">
+        <div class="thumbnail active">
+          <img src="asset/img/chaqueta TP negro.webp" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/chaqueta TP negro.webp')">
+        </div>
+        <div class="thumbnail">
+          <img src="asset/img/chaqueta TP verde.webp" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/chaqueta TP verde.webp')">
+        </div>
+        <div class="thumbnail">
+          <img src="asset/img/chaqueta TP cafe.webp" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/chaqueta TP cafe.webp')">
+        </div>
+      
+      </div>
+
+      <div class="main-image">
+        <img id="mainImage" class="img-full" src="asset/img/chaqueta TP negro.webp" alt="Buzo Los Angeles">
+      </div>
+    </div>
+
+    <div class="product-details">
+      <h1 class="product-title">TP Streetwear</h1>
+      <div class="product-price">$190.000</div>
+
+      <div class="color-options">
+        <p>Color:</p>
+        <button class="color-option" style="background-color: #000000;"></button>
+        <button class="color-option" style="background-color: #a07b17;"></button>
+        <button class="color-option" style="background-color: #0a793c;"></button>
+      </div>
+
+      <div class="size-section">
+        <h3>Talla</h3>
+        <div class="size-options">
+          <div class="size-row">
+            <div class="size-option">S</div>
+            <div class="size-option">M</div>
+            <div class="size-option">L</div>
+            <div class="size-option">XL</div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="buttons-container">
+        <a class="add-to-cart" href="/ventas-tp">
+          <i class="fas fa-credit-card"></i> COMPRAR
+        </a>
+      </div>
+
+      <button class="btn-add-to-cart"
+              data-id="15"
+              data-name="TP Streetwear"
+              data-price="190000"
+              data-image="asset/img/chaqueta TP negro.webp"
+              data-size=""
+              data-color=""
+              data-enabled="false">
+        Agregar al carrito
+      </button>
+      <div id="selection-alert">Seleccione color y talla</div>
+
+      <div class="shipping-info">
+        <h3>Envíos a Colombia</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Envío gratuito estándar para pedidos de más de $300.000</li>
+          <li><i class="fas fa-check"></i> Más información</li>
+        </ul>
+      </div>
+      <div class="security-info">
+        <ul>
+          <li><i class="fas fa-check-square"></i> Seguridad en las compras</li>
+          <li><i class="fas fa-check-square"></i> Pago seguros</li>
+          <li><i class="fas fa-check-square"></i> Transporte seguro</li>
+          <li><i class="fas fa-check-square"></i> Servicio al cliente</li>
+        </ul>
+      </div>
+      <div class="product-description">
+        <h3>Descripción</h3>
+        <p>Da un paso adelante con estas chaquetas, donde la estética urbana se encuentra con la comodidad total. Perfectos para quienes buscan un look audaz.</p>
+        <ul class="description-list">
+          <li>Diseño urbano moderno</li>
+          <li>Material: mezcla de algodón suave</li>
+          <li>Disponible en varios colores</li>
+          <li>Ajuste relajado y cómodo</li>
+          <li>Ideal para cualquier temporada</li>
+          <li>Disponible en tallas de S a L</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div> <!-- fin page-wrapper -->
+</body>
+</html>
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="public/js/carrito.js"></script>
+    <script src="public/js/interfaz.js"></script>
+    <script src="public/js/imagenes.js"></script>
+
+
+    <title>Producto - TP Streetwear</title>
+</head>
+
+<!-- SIDEBAR CARRITO MEJORADO -->
+<aside id="cart-sidebar" class="cart-closed">
+    <header class="cart-header">
+    <h2>Tu carrito</h2>
+    <button id="btn-close-cart" class="cart-close">×</button>
+    </header>
+    <ul id="cart-items" class="cart-items"> 
+    <!-- Aquí inyectamos: miniatura, nombre, qty, subtotal, eliminar -->
+    </ul>
+    <footer class="cart-footer">
+    <div class="cart-items">
+        <span>Total:</span>
+        <strong id="cart-total">0 COP</strong>
+    </div>
+    <a href="/pedido-confirmado">
+        <button id="btn-checkout" class="checkout-btn">Pagar</button>
+      </a>
+      
+    </footer>
+</aside>  
+<div id="cart-backdrop" class="hidden"></div>
+
+
+<body>
+    <header>
+        <h1>Old School</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inico</a></li>
+                <li><a href="zapatos.html">Zapatos</a></li>
+                <li><a href="Ofertas.html">Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="product-container">
+            <div class="product-images">
+                <img src="asset/img/chaqueta TP negro.webp" alt="Vista frontal del buso" class="main-image" id="mainImage">
+                <div class="thumbnail-images">
+                    <img src="asset/img/chaqueta TP negro.webp" alt="Vista lateral del buso" onclick="changeImage(this)">
+                    <img src="asset/img/chaqueta TP verde.webp" alt="Vista lateral del buso" onclick="changeImage(this)">
+                    <img src="asset/img/chaqueta TP cafe.webp" alt="Vista de perfil del buso" onclick="changeImage(this)">
+                </div>
+            </div>
+            <div class="product-details">
+                <a href="/miscelanea" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    Volver atrás
+                </a>
+                <h2>TP Streetwear</h2>
+                <p class="price">
+                    <span class="discounted-price">$190.000</span>
+                </p>
+                
+                <div class="color-options">
+                    <p>Color:</p>
+                    <button class="color-option" style="background-color: #000000;"></button>
+                    <button class="color-option" style="background-color: #a07b17;"></button>
+                    <button class="color-option" style="background-color: #0a793c;"></button>
+                </div>
+                <div class="size-options">
+                    <p>Talla:</p>
+                    <button class="size-option"></button>
+                    <button class="size-option"></button>
+                    <button class="size-option"></button>
+                    <button class="size-option"></button>
+                </div>
+            <!-- Dentro de la sección product-details, donde agrupar los botones -->
+            <div class="buttons-container">
+                <a class="add-to-cart" href="/ventas-tp">
+                <i class="fas fa-credit-card"></i> COMPRAR
+                </a>    
+               <!-- thumbnails -->
+               <button class="btn-add-to-cart"
+               data-id="15"
+               data-name="TP Streetwear"
+               data-price="190000"
+               data-image="asset/img/chaqueta TP negro.webp"
+               data-size=""
+               data-color=""
+               data-enabled="false">
+         Agregar al carrito
+       </button>
+
+            </div>
+
+<!-- (Opcional) Eliminar cualquier párrafo de selección previo -->
+<!-- 
+<p id="selection-warning" style="display: none;">Seleccione color y talla</p>
+-->
+
+<!-- Toast alert -->
+<div id="selection-alert">Seleccione color y talla</div>
+
+                <div class="additional-info">
+                    <p href="#">Da un paso adelante con estas chaquetas, donde la estética urbana se encuentra con la
+                        comodidad total.
+                        Perfectos para quienes buscan un look audaz</p>
+                </div>
+            </div>  
+        </div>
+    </main>
+</body>
+

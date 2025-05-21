@@ -1,0 +1,320 @@
+/* Estilos generales */
+.ventas-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d3748;
+    background: linear-gradient(135deg, #f9fafb 0%, #edf2f7 100%);
+    min-height: 100vh;
+  }
+  
+  h2 {
+    color: #2b6cb0;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #4299e1 0%, #2b6cb0 100%);
+    border-radius: 3px;
+  }
+  
+  h3, h4 {
+    color: #2b6cb0;
+    margin: 1.2rem 0 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  /* Tarjeta de producto */
+  .detalle-compra, .confirmacion-pedido {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .detalle-compra:hover, .confirmacion-pedido:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Galería de imágenes */
+  .imagen-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .controles-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    pointer-events: none;
+  }
+  
+  .btn-cambiar {
+    pointer-events: all;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: #2b6cb0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-cambiar:hover {
+    background-color: white;
+    transform: scale(1.1);
+  }
+  
+  .puntos-navegacion {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .puntos-navegacion span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .puntos-navegacion span.activo {
+    background-color: white;
+    transform: scale(1.2);
+  }
+  
+  .puntos-navegacion span:hover {
+    background-color: white;
+  }
+  
+  /* Selector de colores */
+  .opciones-color {
+    margin: 1.5rem 0;
+  }
+  
+  .colores-disponibles {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #e2e8f0;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .color-option.selected {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #2b6cb0;
+  }
+  
+  .color-option:hover {
+    transform: scale(1.1);
+  }
+  
+  .check-icon {
+    color: white;
+    font-size: 0.8rem;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .color-tag {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+    border: 1px solid #e2e8f0;
+  }
+  
+  /* Formulario */
+  .opciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .opciones div {
+    margin-bottom: 1.2rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.95rem;
+  }
+  
+  select, input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background-color: #f8fafc;
+  }
+  
+  select:focus, input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+  }
+  
+  /* Botones */
+  button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button:not(.confirmar) {
+    background-color: #e2e8f0;
+    color: #2d3748;
+  }
+  
+  button:not(.confirmar):hover {
+    background-color: #cbd5e0;
+    transform: translateY(-2px);
+  }
+  
+  button i {
+    margin-right: 0.5rem;
+  }
+  
+  .btn-continuar, .confirmar {
+    background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(66, 153, 225, 0.3);
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .btn-continuar:hover, .confirmar:hover {
+    background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(66, 153, 225, 0.3);
+  }
+  
+  /* Resumen del pedido */
+  .resumen-producto, .info-entrega, .datos-usuario {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .resumen-producto img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .datos-usuario div {
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Acciones */
+  .acciones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  /* Precio */
+  .price {
+    font-weight: 700;
+    color: #2b6cb0;
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .producto-info {
+      flex-direction: column;
+    }
+    
+    .imagen-container {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+    }
+    
+    .opciones {
+      grid-template-columns: 1fr;
+    }
+    
+    .ventas-container {
+      padding: 1rem;
+    }
+  }

@@ -1,0 +1,116 @@
+<div class="mis-compras-container">
+    <h1 class="titulo-principal">Mis Compras</h1>
+    
+    <!-- Filtros -->
+    <div class="filtros-container">
+      <button 
+        (click)="filtro = 'todos'"
+        [class.filtro-activo]="filtro === 'todos'"
+        class="filtro-btn"
+      >
+        Todos
+      </button>
+      <button 
+        (click)="filtro = 'pendientes'"
+        [class.filtro-activo]="filtro === 'pendientes'"
+        class="filtro-btn"
+      >
+        Pendientes
+      </button>
+    </div>
+  
+    <!-- Lista de compras -->
+    <div *ngIf="comprasFiltradas.length > 0; else noCompras" class="compras-list">
+      <div *ngFor="let compra of comprasFiltradas" class="compra-card">
+        <div class="compra-header">
+          <h2 class="compra-id">Pedido #{{compra.id | slice:4}}</h2>
+          <span class="compra-fecha">{{compra.fecha | date:'mediumDate'}}</span>
+        </div>
+        
+        <div class="compra-body">
+          <!-- Imagen del producto -->
+          <div class="compra-imagen">
+            <img [src]="compra.producto.imagen" alt="{{compra.producto.nombre}}" class="imagen-producto">
+          </div>
+          
+          <!-- Detalles del producto -->
+          <div class="compra-detalles">
+            <h3 class="producto-nombre">{{compra.producto.nombre}}</h3>
+            <div class="detalles-grid">
+              <div>
+                <p class="detalle-titulo">Cantidad:</p>
+                <p class="detalle-valor">{{compra.cantidad}}</p>
+              </div>
+              <div>
+                <p class="detalle-titulo">Color:</p>
+                <p class="detalle-valor">{{compra.producto.color}}</p>
+              </div>
+              <div>
+                <p class="detalle-titulo">Talla:</p>
+                <p class="detalle-valor">{{compra.producto.talla}}</p>
+              </div>
+              <div>
+                <p class="detalle-titulo">Estado:</p>
+                <p class="detalle-valor">
+                  <span [class]="getEstadoClass(compra.estado)">
+                    {{getEstadoTexto(compra.estado)}}
+                  </span>
+                </p>
+              </div>
+            </div>
+            
+            <p class="entrega-estimada">
+              <i class="icono-entrega"></i>
+              Entrega estimada: {{compra.fechaEntregaEstimada}}
+            </p>
+          </div>
+          
+          <!-- Total y acciones -->
+          <div class="compra-acciones">
+            <p class="compra-total">{{formatPrice(compra.total)}}</p>
+            
+            <div class="acciones-botones">
+              <button 
+                *ngIf="compra.estado === 'pendiente'"
+                (click)="cambiarEstado(compra.id, 'completado')"
+                class="btn-completado"
+              >
+                Marcar como completado
+              </button>
+              <button 
+                *ngIf="compra.estado === 'pendiente'"
+                (click)="cambiarEstado(compra.id, 'cancelado')"
+                class="btn-cancelado"
+              >
+                Cancelar pedido
+              </button>
+              <button 
+                *ngIf="compra.estado === 'completado'"
+                (click)="cambiarEstado(compra.id, 'pendiente')"
+                class="btn-pendiente"
+              >
+                Volver a pendiente
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mensaje cuando no hay compras -->
+    <ng-template #noCompras>
+      <div class="no-compras">
+        <div class="no-compras-icono">
+          <i class="icono-carrito"></i>
+        </div>
+        <h3 class="no-compras-titulo">No tienes compras registradas</h3>
+        <p class="no-compras-mensaje">Realiza tu primera compra y aparecerá aquí.</p>
+        <a 
+          routerLink="/miscelanea"
+          class="btn-ir-comprar"
+        >
+          Ir a comprar
+        </a>
+      </div>
+    </ng-template>
+  </div>

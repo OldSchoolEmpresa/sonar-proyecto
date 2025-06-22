@@ -11,10 +11,20 @@
           <img [src]="pedido.imagenActual" 
                [alt]="pedido.producto.nombre + ' ' + pedido.colorSeleccionado.nombre">
           <div class="puntos-navegacion">
+<<<<<<< HEAD
             <span *ngFor="let img of pedido.colorSeleccionado.imagenes; let i = index"
                   [class.activo]="i === pedido.indiceImagen"
                   (click)="seleccionarImagen(i)">
             </span>
+=======
+           <span *ngFor="let img of pedido.colorSeleccionado.imagenes; let i = index"
+      [class.activo]="i === pedido.indiceImagen"
+      (click)="seleccionarImagen(i)"
+      tabindex="0"
+      (keydown)="handleKeyEnter($event, i)">
+       </span>
+
+>>>>>>> ae2e750 (Correcciones de accesibilidad para mejorar calificación SonarQube)
           </div>
         </div>
         

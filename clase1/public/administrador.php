@@ -151,14 +151,18 @@ if (!isset($_SESSION['admin'])) {
       <div class="logo-card">
         <img src="/laravel/clase1/app/vista/imagenes/logo_prueba_222-removebg-preview.png" alt="Logo de OLD SCHOOL">
       </div>
-
       <ul>
-        <!-- Enlaces para cargar el contenido en el iframe -->
-        <li><a href="inicio.php" target="contenido" class="active">Inicio</a></li>
-        <li><a href="../modelo/modelo.php" target="contenido">Gestión de usuarios</a></li>
-        <li><a href="inventario.php" target="contenido">Inventario</a></li>
-        <li><a href="ganancias.php" target="contenido">Ganancias</a></li>
-        <li><a href="configuracion.php" target="contenido">Configuración</a></li>
+      
+       <ul>
+  <li><a href="/panel/inicio" target="contenido">Inicio</a></li>
+  <li><a href="/panel/modelo" target="contenido">Gestión de usuarios</a></li>
+  <li><a href="/panel/inventario" target="contenido">Inventario</a></li>
+  <li><a href="/panel/ganancias" target="contenido">Ganancias</a></li>
+  <li><a href="/panel/configuracion" target="contenido">Configuración</a></li>
+  <li><a href="/panel/logout" target="contenido">Cerrar sesión</a></li>
+</ul>
+
+
       </ul>
       <!-- Enlace para cerrar sesión -->
       <a href="logout.php" class="logout">Cerrar Sesión</a>
@@ -173,7 +177,7 @@ if (!isset($_SESSION['admin'])) {
         <div class="admin-details">Bienvenido, Administrador</div>
       </div>
       <!-- Iframe que carga el contenido de cada sección -->
-      <iframe name="contenido" id="contenido" src="inicio.php"></iframe>
+      <iframe name="contenido" id="contenido" src="/panel/inicio"></iframe>
       <?php for ($i = 0; $i < 10; $i++) { echo "<!-- Línea extra en main-content PHP: $i -->\n"; } ?>
     </div>
   </div>

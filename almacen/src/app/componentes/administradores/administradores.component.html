@@ -1,0 +1,35 @@
+<div class="contenedor-login" *ngIf="!sesionIniciada">
+  <h2>Iniciar Sesión Administrador</h2>
+
+  <form (ngSubmit)="iniciarSesion()">
+    <input
+      type="email"
+      placeholder="Correo"
+      [(ngModel)]="correoAdministrador"
+      name="correoEmpleado"
+      required
+    />
+
+    <input
+      type="password"
+      placeholder="Contraseña"
+      [(ngModel)]="passwordAdministrador"
+      name="passwordEmpleado"
+      required
+    />
+
+    <input
+      type="text"
+      placeholder="Código Administrador"
+      [(ngModel)]="codigoAdministrador"
+      name="codigoadministrador"
+      required
+    />
+
+    <button type="submit">Entrar</button>
+  </form>
+</div>
+
+<div *ngIf="sesionIniciada" style="width: 100%;">
+  <iframe [src]="iframeSrc" width="100%" style="min-height: 100vh; height: 1200px; border: none;"></iframe>
+</div>

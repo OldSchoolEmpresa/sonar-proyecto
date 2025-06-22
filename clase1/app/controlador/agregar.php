@@ -1,19 +1,30 @@
 <?php
-include_once '../modelo/modelo.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    include_once 'modelo/conexion.php';
+    $conexion = new Conexion();
+    $db = $conexion->conectar();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $contrasena = $_POST['contrasena'];
     $ciudad = $_POST['ciudad'];
     $direccion = $_POST['direccion'];
     $telefono = $_POST['telefono'];
-    $email = $_POST['email'];
-    $contrasena = $_POST['contrasena']; 
 
-    $modelo = new Modelo();
-    if ($modelo->agregarUsuario($nombre, $ciudad, $direccion, $telefono, $email, $contrasena)) {
-        echo json_encode(['status' => 'success']);
+    $query = $db->prepare("INSERT INTO usuarios (nombre, email, contrasena, ciudad, direccion, telefono) VALUES (:nombre, :email, :contrasena, :ciudad, :direccion, :telefono)");
+    $query->bindParam(':nombre', $nombre);
+    $query->bindParam(':email', $email);
+    $query->bindParam(':contrasena', $contrasena);
+    $query->bindParam(':ciudad', $ciudad);
+    $query->bindParam(':direccion', $direccion);
+    $query->bindParam(':telefono', $telefono);
+
+    if ($query->execute()) {
+        echo "Usuario registrado correctamente";
     } else {
-        echo json_encode(['status' => 'error', 'message' => 'Error al agregar usuario.']);
+        echo "Error al registrar el usuario";
     }
+} else {
+    echo "Método no permitido";
 }
 ?>

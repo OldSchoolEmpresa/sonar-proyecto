@@ -760,7 +760,7 @@ h1 {
         </thead>
         <tbody>
         <?php
-          include_once '../modelo/modelo_inventario.php';
+         include_once __DIR__ . '/../modelo/modelo_inventario.php';
           $modelo = new ModeloInventario();
           $productos = $modelo->obtenerProductos();
   
@@ -909,7 +909,7 @@ h1 {
       e.preventDefault();
       const formData = new FormData(this);
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", "../controlador/agregar_inventario.php", true);
+      xhr.open("POST", "/laravel/clase1/app/controlador/agregar_inventario.php", true);
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
           if (xhr.responseText.trim() === "ok") {
@@ -952,7 +952,7 @@ h1 {
           const form = document.getElementById("editarProductoForm_" + id);
           const formData = new FormData(form);
           const xhr = new XMLHttpRequest();
-          xhr.open("POST", "../controlador/editar_inventario.php", true);
+          xhr.open("POST", "/laravel/clase1/app/controlador/editar_inventario.php", true);
           xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
               if (xhr.responseText.trim() === "ok") {
@@ -994,7 +994,7 @@ h1 {
       }).then((result) => {
         if (result.isConfirmed) {
           const xhr = new XMLHttpRequest();
-          xhr.open("POST", "../controlador/eliminar_inventario.php", true);
+          xhr.open("POST", "http://52.225.87.160/eliminar_inventario", true);
           xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {

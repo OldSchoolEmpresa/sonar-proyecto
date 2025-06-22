@@ -1,0 +1,37 @@
+<div class="contenedor-login">
+  <h2>Iniciar Sesión</h2>
+
+  <!-- Mensaje visible en pantalla con data-cy -->
+  <div
+    *ngIf="mostrarMensaje"
+    class="mensaje"
+    [ngClass]="{
+      'mensaje-exito': tipoMensaje === 'exito',
+      'mensaje-error': tipoMensaje === 'error',
+      'mensaje-alerta': tipoMensaje === 'alerta'
+    }"
+    data-cy="mensaje-login"
+  >
+    {{ mensaje }}
+  </div>
+
+  <form (ngSubmit)="iniciarSesion()">
+    <input
+      type="email"
+      placeholder="Correo"
+      [(ngModel)]="correoEmpleado"
+      name="correoEmpleado"
+      required
+    />
+
+    <input
+      type="password"
+      placeholder="Contraseña"
+      [(ngModel)]="passwordEmpleado"
+      name="passwordEmpleado"
+      required
+    />
+
+    <button type="submit">Entrar</button>
+  </form>
+</div>

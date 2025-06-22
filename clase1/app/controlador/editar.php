@@ -1,22 +1,41 @@
 <?php
-include_once '../modelo/modelo.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    include_once 'modelo/conexion.php';
+    $conexion = new Conexion();
+    $db = $conexion->conectar();
 
-$modelo = new Modelo();
+    $id = $_POST['id'];
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $contrasena = $_POST['contrasena'];
+    $ciudad = $_POST['ciudad'];
+    $direccion = $_POST['direccion'];
+    $telefono = $_POST['telefono'];
 
-$id = $_POST['id'];
-$nombre = $_POST['nombre'];
-$ciudad = $_POST['ciudad'];
-$direccion = $_POST['direccion'];
-$telefono = $_POST['telefono'];
-$email = $_POST['email'];
+    $query = $db->prepare("UPDATE usuarios SET 
+        nombre = :nombre, 
+        email = :email, 
+        contrasena = :contrasena, 
+        ciudad = :ciudad, 
+        direccion = :direccion, 
+        telefono = :telefono 
+        WHERE id = :id
+    ");
 
-$contrasena = isset($_POST['contrasena']) && !empty($_POST['contrasena']) ? password_hash($_POST['contrasena'], PASSWORD_BCRYPT) : null;
+    $query->bindParam(':id', $id, PDO::PARAM_INT);
+    $query->bindParam(':nombre', $nombre);
+    $query->bindParam(':email', $email);
+    $query->bindParam(':contrasena', $contrasena);
+    $query->bindParam(':ciudad', $ciudad);
+    $query->bindParam(':direccion', $direccion);
+    $query->bindParam(':telefono', $telefono);
 
-$resultado = $modelo->actualizarUsuario($id, $nombre, $ciudad, $direccion, $telefono, $email, $contrasena);
-
-if ($resultado) {
-    echo "Usuario actualizado exitosamente";
+    if ($query->execute()) {
+        echo "Usuario actualizado correctamente";
+    } else {
+        echo "Error al actualizar el usuario";
+    }
 } else {
-    echo "Error al actualizar usuario";
+    echo "Método no permitido";
 }
 ?>

@@ -61,10 +61,12 @@ class ModeloInventario {
         ]);
     }
 
-    // Eliminar un producto
-    public function eliminarProducto($id) {
-        $sql = "DELETE FROM inventario WHERE id = :id";
-        $stmt = $this->db->prepare($sql);
-        return $stmt->execute([':id' => $id]);
+    
+    public function eliminarProducto($id)
+    {
+        $db = $this->conexion();
+        $query = $db->prepare("DELETE FROM inventario WHERE id = :id");
+        $query->bindParam(':id', $id, PDO::PARAM_INT);
+        return $query->execute();
     }
 }

@@ -12,7 +12,7 @@ $data = [
     'ganancias'  => 8450,
     'bajo_critico' => 5,
     'bajo_normal'  => 12,
-    'config_url' => 'configuracion.php'
+    'config_url' => 'configuracion.php' 
 ];
 $adminName = $_SESSION['admin_name'] ?? 'Administrador';
 ?>

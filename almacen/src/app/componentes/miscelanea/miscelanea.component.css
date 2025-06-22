@@ -74,79 +74,51 @@ header {
   padding: 10px 20px;
   color: white;
 }
-.carousel-container {
+
+  .carousel-container {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: auto;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  
+  background-color: transparent; /* ⬅️ No negro */
+  padding: 0;
+  margin: 0 auto;
+  min-height: 650px;  /* ⬅️ Esto también ayuda */
 }
 
 .carousel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  border: none;
-  position: relative;
-  top: 0;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-  min-width: 100%;
-  height: 100vh; /* Ajusta la altura */
+  flex: 0 0 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center; /* Centra las imágenes */
-  
+  min-height: 1200px; /* Espacio arriba/abajo para respirar */
+   width: 100%;
+    position: relative;
 }
 
 .slide img {
-  width: 50%; /* Cada imagen ocupa la mitad del ancho */
-  height: 100%; /* Ajusta la altura total */
-  object-fit: cover; /* Se ajusta bien sin deformarse */
-  margin: 0; /* Quita cualquier espacio entre imágenes */
-  padding: 0;
-  border-radius: 0; /* Sin bordes redondeados */
-  
-}
-
-
-.nav-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  margin: 5px;
-  background-color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.3s;
-  
-}
-
-.dot.active {
-  opacity: 1;
-  background: rgb(13, 207, 237);
-  transform: scale(1.2) 
-
+  max-height: 1200px;
+  max-width: 1500px; 
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 .nav-arrows {
   position: absolute;
-  top: 50%;
+  top: 40%; /* 🔽 Baja las flechas */
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -154,22 +126,39 @@ header {
   pointer-events: none;
 }
 
+
 .arrow {
-  background: rgba(0, 0, 0, 0.6);
+  background: none;
   border: none;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  font-size: 22px;
-  color: aqua;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  pointer-events: all;
   cursor: pointer;
-  pointer-events: auto;
-  transition: 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
+/* Puntos */
+.nav-dots {
+  position: relative;
+  bottom: 0;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+
 
 .arrow:hover {
   background: white;

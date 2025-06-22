@@ -3,6 +3,11 @@
 
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\AuthController;
+    use App\Http\Controllers\PanelController;
+    use App\Http\Controllers\UsuarioController;
+    use App\Http\Controllers\CrudInventarioController;
+    use App\Http\Controllers\LoginAdministrador;
+    use App\Http\Controllers\LoginController;
 
 
 
@@ -16,6 +21,20 @@
     | be assigned to the "web" middleware group. Make something great!
     |
     */
+Route::post('/login', [LoginController::class, 'login']);    
+Route::post('/admin/login', [LoginAdministrador::class, 'login']);
+Route::post('/eliminar_inventario', [CrudInventarioController::class, 'eliminar']);
+Route::post('/editar', [UsuarioController::class, 'editar']);
+Route::post('/agregar', [UsuarioController::class, 'agregar']);
+Route::post('/eliminar', [UsuarioController::class, 'eliminar']);
+Route::get('/administrador', [PanelController::class, 'administrador']); 
+Route::get('/panel/inicio', [PanelController::class, 'inicio']);
+Route::get('/panel/modelo', [PanelController::class, 'modelo']);
+Route::get('/panel/inventario', [PanelController::class, 'inventario']);
+Route::get('/panel/ganancias', [PanelController::class, 'ganancias']);
+Route::get('/panel/configuracion', [PanelController::class, 'configuracion']);
+Route::get('/panel/logout', [PanelController::class, 'logout']);
+
     Route::get('/token', function () {
         return response()->json(['token' => csrf_token()]);
     });

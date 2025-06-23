@@ -31,46 +31,50 @@
    <div class="product-images">
   <div class="thumbnails">
   <div class="thumbnail active">
-    <img 
-      src="asset/img/Air max azul.jpeg" 
-      alt="Vista principal"
-      tabindex="0"
+    <button 
+      class="btn-thumbnail" 
       aria-label="Vista principal"
-      (mouseenter)="cambiarImagen('asset/img/Air max azul.jpeg')"
+      (mouseenter)="cambiarImagen('asset/img/Air max azul.jpeg')" 
       (keydown)="($event.key === 'Enter') && cambiarImagen('asset/img/Air max azul.jpeg')"
     >
+      <img src="asset/img/Air max azul.jpeg" alt="Vista principal">
+    </button>
   </div>
+
   <div class="thumbnail">
-    <img 
-      src="asset/img/Air max 90 morado con blanco.jpg" 
-      alt="Vista lateral"
-      tabindex="0"
+    <button 
+      class="btn-thumbnail" 
       aria-label="Vista lateral"
-      (mouseenter)="cambiarImagen('asset/img/Air max 90 morado con blanco.jpg')"
+      (mouseenter)="cambiarImagen('asset/img/Air max 90 morado con blanco.jpg')" 
       (keydown)="($event.key === 'Enter') && cambiarImagen('asset/img/Air max 90 morado con blanco.jpg')"
     >
+      <img src="asset/img/Air max 90 morado con blanco.jpg" alt="Vista lateral">
+    </button>
   </div>
+
   <div class="thumbnail">
-    <img 
-      src="asset/img/Air max 90 roja blanco.jpg" 
-      alt="Vista detalle"
-      tabindex="0"
+    <button 
+      class="btn-thumbnail" 
       aria-label="Vista detalle"
-      (mouseenter)="cambiarImagen('asset/img/Air max 90 roja blanco.jpg')"
+      (mouseenter)="cambiarImagen('asset/img/Air max 90 roja blanco.jpg')" 
       (keydown)="($event.key === 'Enter') && cambiarImagen('asset/img/Air max 90 roja blanco.jpg')"
     >
+      <img src="asset/img/Air max 90 roja blanco.jpg" alt="Vista detalle">
+    </button>
   </div>
+
   <div class="thumbnail">
-    <img 
-      src="asset/img/Air max gris.jpeg" 
-      alt="Vista posterior"
-      tabindex="0"
+    <button 
+      class="btn-thumbnail" 
       aria-label="Vista posterior"
-      (mouseenter)="cambiarImagen('asset/img/Air max gris.jpeg')"
+      (mouseenter)="cambiarImagen('asset/img/Air max gris.jpeg')" 
       (keydown)="($event.key === 'Enter') && cambiarImagen('asset/img/Air max gris.jpeg')"
     >
+      <img src="asset/img/Air max gris.jpeg" alt="Vista posterior">
+    </button>
   </div>
 </div>
+
 
   <div class="main-image">
     <img id="mainImage" class="img-full" src="asset/img/Air max azul.jpeg" alt="Air Max 90">

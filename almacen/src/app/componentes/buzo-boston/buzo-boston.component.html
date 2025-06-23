@@ -34,41 +34,36 @@
 
   <div class="product-container">
     <div class="product-images">
-      <div class="thumbnails">
+  <div class="thumbnails">
   <div class="thumbnail active">
-    <img 
-      src="asset/img/boston morado.jpeg" 
-      alt="Vista principal"
-      role="button"
-      tabindex="0"
-      aria-label="Vista principal"
-      (mouseenter)="cambiarImagen('asset/img/boston morado.jpeg')"
-      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/boston morado.jpeg')"
-    >
+    <button 
+      class="img-button" 
+      aria-label="Vista principal" 
+      (mouseenter)="cambiarImagen('asset/img/boston morado.jpeg')" 
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/boston morado.jpeg')">
+      <img src="asset/img/boston morado.jpeg" alt="Vista principal">
+    </button>
   </div>
   <div class="thumbnail">
-    <img 
-      src="asset/img/Boston verde.jpeg" 
-      alt="Vista 1"
-      role="button"
-      tabindex="0"
-      aria-label="Vista 1"
-      (mouseenter)="cambiarImagen('asset/img/Boston verde.jpeg')"
-      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Boston verde.jpeg')"
-    >
+    <button 
+      class="img-button" 
+      aria-label="Vista 1" 
+      (mouseenter)="cambiarImagen('asset/img/Boston verde.jpeg')" 
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Boston verde.jpeg')">
+      <img src="asset/img/Boston verde.jpeg" alt="Vista 1">
+    </button>
   </div>
   <div class="thumbnail">
-    <img 
-      src="asset/img/Boston negro.jpeg" 
-      alt="Vista 2"
-      role="button"
-      tabindex="0"
-      aria-label="Vista 2"
-      (mouseenter)="cambiarImagen('asset/img/Boston negro.jpeg')"
-      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Boston negro.jpeg')"
-    >
+    <button 
+      class="img-button" 
+      aria-label="Vista 2" 
+      (mouseenter)="cambiarImagen('asset/img/Boston negro.jpeg')" 
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Boston negro.jpeg')">
+      <img src="asset/img/Boston negro.jpeg" alt="Vista 2">
+    </button>
   </div>
 </div>
+
 
 
       <div class="main-image">

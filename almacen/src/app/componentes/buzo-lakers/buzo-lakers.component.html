@@ -34,52 +34,45 @@
 
   <div class="product-container">
     <div class="product-images">
-     <div class="thumbnails">
+   <div class="thumbnails">
   <div class="thumbnail active">
-    <img 
-      src="asset/img/Lakers Blanco.jpeg" 
-      alt="Vista principal"
-      role="button"
-      tabindex="0"
-      aria-label="Vista principal"
-      (mouseenter)="cambiarImagen('asset/img/Lakers Blanco.jpeg')"
-      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Lakers Blanco.jpeg')"
-    >
+    <button 
+      class="img-button" 
+      aria-label="Vista principal" 
+      (mouseenter)="cambiarImagen('asset/img/Lakers Blanco.jpeg')" 
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Lakers Blanco.jpeg')">
+      <img src="asset/img/Lakers Blanco.jpeg" alt="Vista principal">
+    </button>
   </div>
   <div class="thumbnail">
-    <img 
-      src="asset/img/LAKERS AMARILLO.jpg" 
-      alt="Vista 1"
-      role="button"
-      tabindex="0"
-      aria-label="Vista 1"
-      (mouseenter)="cambiarImagen('asset/img/LAKERS AMARILLO.jpg')"
-      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/LAKERS AMARILLO.jpg')"
-    >
+    <button 
+      class="img-button" 
+      aria-label="Vista 1" 
+      (mouseenter)="cambiarImagen('asset/img/LAKERS AMARILLO.jpg')" 
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/LAKERS AMARILLO.jpg')">
+      <img src="asset/img/LAKERS AMARILLO.jpg" alt="Vista 1">
+    </button>
   </div>
   <div class="thumbnail">
-    <img 
-      src="asset/img/LAKERS MORADO.jpg" 
-      alt="Vista 2"
-      role="button"
-      tabindex="0"
-      aria-label="Vista 2"
-      (mouseenter)="cambiarImagen('asset/img/LAKERS MORADO.jpg')"
-      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/LAKERS MORADO.jpg')"
-    >
+    <button 
+      class="img-button" 
+      aria-label="Vista 2" 
+      (mouseenter)="cambiarImagen('asset/img/LAKERS MORADO.jpg')" 
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/LAKERS MORADO.jpg')">
+      <img src="asset/img/LAKERS MORADO.jpg" alt="Vista 2">
+    </button>
   </div>
   <div class="thumbnail">
-    <img 
-      src="asset/img/LAKERS NEGRO.jpg" 
-      alt="Vista 3"
-      role="button"
-      tabindex="0"
-      aria-label="Vista 3"
-      (mouseenter)="cambiarImagen('asset/img/LAKERS NEGRO.jpg')"
-      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/LAKERS NEGRO.jpg')"
-    >
+    <button 
+      class="img-button" 
+      aria-label="Vista 3" 
+      (mouseenter)="cambiarImagen('asset/img/LAKERS NEGRO.jpg')" 
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/LAKERS NEGRO.jpg')">
+      <img src="asset/img/LAKERS NEGRO.jpg" alt="Vista 3">
+    </button>
   </div>
 </div>
+
 
 
       <div class="main-image">

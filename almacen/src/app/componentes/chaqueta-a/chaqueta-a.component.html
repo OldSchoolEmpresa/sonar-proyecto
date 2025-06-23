@@ -24,36 +24,31 @@
             <div class="product-images">
                 <img src="asset/img/chaqueta A negro.webp" alt="Vista frontal del buso" class="main-image" id="mainImage">
                 <div class="thumbnail-images">
-  <img 
-    src="asset/img/chaqueta A negro.webp" 
-    alt="Vista lateral del buso"
-    role="button"
-    tabindex="0"
+  <button 
+    class="img-button" 
     aria-label="Vista lateral del buso"
-    (click)="changeImage($event)"
-    (keydown)="event.key === 'Enter' && changeImage($event)"
-  >
+    (click)="changeImage('asset/img/chaqueta A negro.webp')"
+    (keydown)="if($event.key === 'Enter') changeImage('asset/img/chaqueta A negro.webp')">
+    <img src="asset/img/chaqueta A negro.webp" alt="Vista lateral del buso">
+  </button>
 
-  <img 
-    src="asset/img/chaqueta A rojo.webp" 
-    alt="Vista de perfil del buso"
-    role="button"
-    tabindex="0"
+  <button 
+    class="img-button" 
     aria-label="Vista de perfil del buso"
-    (click)="changeImage($event)"
-    (keydown)="event.key === 'Enter' && changeImage($event)"
-  >
+    (click)="changeImage('asset/img/chaqueta A rojo.webp')"
+    (keydown)="if($event.key === 'Enter') changeImage('asset/img/chaqueta A rojo.webp')">
+    <img src="asset/img/chaqueta A rojo.webp" alt="Vista de perfil del buso">
+  </button>
 
-  <img 
-    src="asset/img/chaqueta A verde.webp" 
-    alt="Vista en detalle del buso"
-    role="button"
-    tabindex="0"
+  <button 
+    class="img-button" 
     aria-label="Vista en detalle del buso"
-    (click)="changeImage($event)"
-    (keydown)="event.key === 'Enter' && changeImage($event)"
-  >
+    (click)="changeImage('asset/img/chaqueta A verde.webp')"
+    (keydown)="if($event.key === 'Enter') changeImage('asset/img/chaqueta A verde.webp')">
+    <img src="asset/img/chaqueta A verde.webp" alt="Vista en detalle del buso">
+  </button>
 </div>
+
 
 
             </div>

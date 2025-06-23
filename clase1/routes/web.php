@@ -51,5 +51,8 @@ Route::get('/panel/logout', [PanelController::class, 'logout']);
     });
     // routes/web.php
     Route::get('/modelo', function () {
-        include app_path('modelo/modelo.php'); // Incluye el archivo PHP
+        if (!file_exists('modelo/modelo.php')) {
+    die('Error: No se pudo encontrar el archivo modelo.php');
+}
+require_once 'modelo/modelo.php';
     });

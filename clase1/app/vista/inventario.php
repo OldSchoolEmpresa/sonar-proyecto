@@ -800,40 +800,48 @@ h1 {
                   <form id="editarProductoForm_<?php echo $prod['id']; ?>" onsubmit="editarProducto(<?php echo $prod['id']; ?>); return false;">
                     <input type="hidden" name="id" value="<?php echo $prod['id']; ?>">
                     <div class="mb-3">
-                      <label class="form-label">Nombre</label>
-                      <input type="text" name="Nombre" class="form-control" value="<?php echo $prod['Nombre']; ?>" required>
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Categoría</label>
-                      <input type="text" name="Categoria" class="form-control" value="<?php echo $prod['Categoria']; ?>" required>
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Precio</label>
-                      <input type="number" name="Precio" class="form-control" step="0.01" value="<?php echo $prod['Precio']; ?>" required>
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Stock</label>
-                      <input type="number" name="Stock" class="form-control" value="<?php echo $prod['Stock']; ?>" required>
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Vendidos</label>
-                      <input type="number" name="Vendidos" class="form-control" value="<?php echo $prod['Vendidos']; ?>" required>
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Fecha Llegada</label>
-                      <input type="date" name="fecha_llegada" class="form-control" value="<?php echo $prod['fecha_llegada']; ?>">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Fecha Salida</label>
-                      <input type="date" name="fecha_salida" class="form-control" value="<?php echo $prod['fecha_salida']; ?>">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Estado</label>
-                      <select name="Estado" class="form-select">
-                        <option value="1" <?php if($prod['Estado'] == 1) echo 'selected'; ?>>Activo</option>
-                        <option value="0" <?php if($prod['Estado'] == 0) echo 'selected'; ?>>Inactivo</option>
-                      </select>
-                    </div>
+  <label for="nombre" class="form-label">Nombre</label>
+  <input id="nombre" type="text" name="Nombre" class="form-control" value="<?php echo $prod['Nombre']; ?>" required>
+</div>
+
+<div class="mb-3">
+  <label for="categoria" class="form-label">Categoría</label>
+  <input id="categoria" type="text" name="Categoria" class="form-control" value="<?php echo $prod['Categoria']; ?>" required>
+</div>
+
+<div class="mb-3">
+  <label for="precio" class="form-label">Precio</label>
+  <input id="precio" type="number" name="Precio" class="form-control" step="0.01" value="<?php echo $prod['Precio']; ?>" required>
+</div>
+
+<div class="mb-3">
+  <label for="stock" class="form-label">Stock</label>
+  <input id="stock" type="number" name="Stock" class="form-control" value="<?php echo $prod['Stock']; ?>" required>
+</div>
+
+<div class="mb-3">
+  <label for="vendidos" class="form-label">Vendidos</label>
+  <input id="vendidos" type="number" name="Vendidos" class="form-control" value="<?php echo $prod['Vendidos']; ?>" required>
+</div>
+
+<div class="mb-3">
+  <label for="fecha_llegada" class="form-label">Fecha Llegada</label>
+  <input id="fecha_llegada" type="date" name="fecha_llegada" class="form-control" value="<?php echo $prod['fecha_llegada']; ?>">
+</div>
+
+<div class="mb-3">
+  <label for="fecha_salida" class="form-label">Fecha Salida</label>
+  <input id="fecha_salida" type="date" name="fecha_salida" class="form-control" value="<?php echo $prod['fecha_salida']; ?>">
+</div>
+
+<div class="mb-3">
+  <label for="estado" class="form-label">Estado</label>
+  <select id="estado" name="Estado" class="form-select">
+    <option value="1" <?php if($prod['Estado'] == 1) echo 'selected'; ?>>Activo</option>
+    <option value="0" <?php if($prod['Estado'] == 0) echo 'selected'; ?>>Inactivo</option>
+  </select>
+</div>
+
                     <button type="submit" class="btn btn-warning w-100">Actualizar</button>
                   </form>
                 </div>

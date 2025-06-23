@@ -4,49 +4,55 @@
 
     <!-- Documento -->
     <div class="mb-3">
-      <label class="form-label">Documento</label>
-      <input type="text" class="form-control" formControlName="idEmpleado" placeholder="Ingrese su documento">
-      <div class="text-danger" [hidden]="form.controls['idEmpleado'].valid || form.controls['idEmpleado'].untouched">
-        ⚠️ El documento debe tener exactamente <strong>10 números</strong>.
-      </div>
-    </div>
+  <label class="form-label" for="idEmpleado">Documento</label>
+  <input type="text" id="idEmpleado" class="form-control" formControlName="idEmpleado" placeholder="Ingrese su documento">
+  <div class="text-danger" [hidden]="form.controls['idEmpleado'].valid || form.controls['idEmpleado'].untouched">
+    ⚠️ El documento debe tener exactamente <strong>10 números</strong>.
+  </div>
+</div>
+
 
     <!-- Nombre -->
     <div class="mb-3">
-      <label class="form-label">Nombre</label>
-      <input type="text" class="form-control" formControlName="nombreEmpleado" placeholder="Ingrese su nombre completo">
-      <div class="text-danger"
-        [hidden]="form.controls['nombreEmpleado'].valid || form.controls['nombreEmpleado'].untouched">
-        ⚠️ El nombre solo puede contener <strong>letras</strong>.
-      </div>
-    </div>
+  <label class="form-label" for="nombreEmpleado">Nombre</label>
+  <input type="text" id="nombreEmpleado" class="form-control" formControlName="nombreEmpleado" placeholder="Ingrese su nombre completo">
+  <div class="text-danger" [hidden]="form.controls['nombreEmpleado'].valid || form.controls['nombreEmpleado'].untouched">
+    ⚠️ El nombre solo puede contener <strong>letras</strong>.
+  </div>
+</div>
+
 
     <!-- Correo -->
     <div class="mb-3">
-      <label class="form-label">Correo</label>
-      <input type="text" class="form-control" formControlName="correoEmpleado"
-        placeholder="Ingrese su correo electrónico">
-      <div class="text-danger"
-        [hidden]="form.controls['correoEmpleado'].valid || form.controls['correoEmpleado'].untouched">
-        ⚠️ Introduzca un correo válido con "<strong>&#64;</strong>".
-      </div>
-    </div>
+  <label class="form-label" for="correoEmpleado">Correo</label>
+  <input type="text" id="correoEmpleado" class="form-control" formControlName="correoEmpleado" placeholder="Ingrese su correo electrónico">
+  <div class="text-danger" [hidden]="form.controls['correoEmpleado'].valid || form.controls['correoEmpleado'].untouched">
+    ⚠️ Introduzca un correo válido con "<strong>&#64;</strong>".
+  </div>
+</div>
+
 
     <!-- Contraseña -->
-    <div class="mb-3">
-      <label class="form-label">Contraseña</label>
-      <div class="input-group">
-        <input [type]="showPassword ? 'text' : 'password'" class="form-control" formControlName="passwordEmpleado"
-          placeholder="Crea una contraseña segura">
-        <button type="button" class="btn btn-outline-secondary" (click)="togglePassword()">
-          <i class="bi" [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'"></i> <!-- Aquí está el ícono de ojo -->
-        </button>
-      </div>
-      <div class="text-danger"
-        [hidden]="form.controls['passwordEmpleado'].valid || form.controls['passwordEmpleado'].untouched">
-        ⚠️ La contraseña debe contener al menos <strong>una letra y un número</strong>.
-      </div>
-    </div>
+   <div class="mb-3">
+  <label class="form-label" for="passwordEmpleado">Contraseña</label>
+  <div class="input-group">
+    <input 
+      [type]="showPassword ? 'text' : 'password'" 
+      id="passwordEmpleado"
+      class="form-control" 
+      formControlName="passwordEmpleado"
+      placeholder="Crea una contraseña segura"
+    >
+    <button type="button" class="btn btn-outline-secondary" (click)="togglePassword()">
+      <i class="bi" [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'"></i>
+    </button>
+  </div>
+  <div class="text-danger"
+    [hidden]="form.controls['passwordEmpleado'].valid || form.controls['passwordEmpleado'].untouched">
+    ⚠️ La contraseña debe contener al menos <strong>una letra y un número</strong>.
+  </div>
+</div>
+
 
     <button type="button" (click)="onSubmit()" class="btn btn-primary">Guardar</button>
   </form>

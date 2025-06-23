@@ -35,17 +35,41 @@
   <div class="product-container">
     <div class="product-images">
       <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/chaqueta California Blanco.webp" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/chaqueta California Blanco.webp')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/chaqueta California negro.webp" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/chaqueta California negro.webp')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/chaqueta California Cafe.webp" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/chaqueta California Cafe.webp')">
-        </div>
+  <div class="thumbnail active">
+    <img 
+      src="asset/img/chaqueta California Blanco.webp" 
+      alt="Vista principal"
+      role="button"
+      tabindex="0"
+      aria-label="Vista principal"
+      onmouseenter="cambiarImagen('asset/img/chaqueta California Blanco.webp')"
+      onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/chaqueta California Blanco.webp')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/chaqueta California negro.webp" 
+      alt="Vista 1"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 1"
+      onmouseenter="cambiarImagen('asset/img/chaqueta California negro.webp')"
+      onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/chaqueta California negro.webp')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/chaqueta California Cafe.webp" 
+      alt="Vista 2"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 2"
+      onmouseenter="cambiarImagen('asset/img/chaqueta California Cafe.webp')"
+      onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/chaqueta California Cafe.webp')"
+    >
+  </div>
+</div>
 
-      </div>
 
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/chaqueta California Blanco.webp" alt="Buzo Los Angeles">

@@ -34,21 +34,53 @@
 
   <div class="product-container">
     <div class="product-images">
-      <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/Buzo Jordan rojo.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Buzo Jordan rojo.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Buzo Jordan blanco.jpeg" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/Buzo Jordan blanco.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Buzo Jordan negro.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Buzo Jordan negro.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/jordan negro azul.jpg" alt="Vista 3" onmouseenter="cambiarImagen('asset/img/jordan negro azul.jpg')">
-        </div>
-       
-      </div>
+     <div class="thumbnails">
+  <div class="thumbnail active">
+    <img 
+      src="asset/img/Buzo Jordan rojo.jpeg" 
+      alt="Vista principal"
+      role="button"
+      tabindex="0"
+      aria-label="Vista principal"
+      (mouseenter)="cambiarImagen('asset/img/Buzo Jordan rojo.jpeg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Buzo Jordan rojo.jpeg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/Buzo Jordan blanco.jpeg" 
+      alt="Vista 1"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 1"
+      (mouseenter)="cambiarImagen('asset/img/Buzo Jordan blanco.jpeg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Buzo Jordan blanco.jpeg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/Buzo Jordan negro.jpeg" 
+      alt="Vista 2"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 2"
+      (mouseenter)="cambiarImagen('asset/img/Buzo Jordan negro.jpeg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Buzo Jordan negro.jpeg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/jordan negro azul.jpg" 
+      alt="Vista 3"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 3"
+      (mouseenter)="cambiarImagen('asset/img/jordan negro azul.jpg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/jordan negro azul.jpg')"
+    >
+  </div>
+</div>
+
 
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Buzo Jordan rojo.jpeg" alt="Buzo Los Angeles">

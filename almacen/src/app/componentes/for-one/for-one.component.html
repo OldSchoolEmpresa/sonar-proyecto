@@ -27,22 +27,42 @@
     <div id="cart-backdrop" class="hidden"></div>
   
     <div class="product-container">
-      <div class="product-images">
-        <div class="thumbnails">
-          <div class="thumbnail active">
-            <img src="asset/img/for one ultima.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/for one ultima.jpeg')">
-          </div>
-          <div class="thumbnail">
-            <img src="asset/img/for one  (1).jpeg" alt="Vista color 1" onmouseenter="cambiarImagen('asset/img/for one  (1).jpeg')">
-          </div>
-          <div class="thumbnail">
-            <img src="asset/img/for one  (2).jpeg" alt="Vista color 2" onmouseenter="cambiarImagen('asset/img/for one  (2).jpeg')">
-          </div>
-        </div>
-        <div class="main-image">
-          <img id="mainImage" class="img-full" src="asset/img/for one ultima.jpeg" alt="For One Clásica">
-        </div>
-      </div>
+      <div class="thumbnails">
+  <div class="thumbnail active">
+    <img 
+      src="asset/img/for one ultima.jpeg" 
+      alt="Vista principal"
+      role="button"
+      tabindex="0"
+      aria-label="Vista principal"
+      onmouseenter="cambiarImagen('asset/img/for one ultima.jpeg')"
+      onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/for one ultima.jpeg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/for one  (1).jpeg" 
+      alt="Vista color 1"
+      role="button"
+      tabindex="0"
+      aria-label="Vista color 1"
+      onmouseenter="cambiarImagen('asset/img/for one  (1).jpeg')"
+      onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/for one  (1).jpeg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/for one  (2).jpeg" 
+      alt="Vista color 2"
+      role="button"
+      tabindex="0"
+      aria-label="Vista color 2"
+      onmouseenter="cambiarImagen('asset/img/for one  (2).jpeg')"
+      onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/for one  (2).jpeg')"
+    >
+  </div>
+</div>
+
   
       <div class="product-details">
         <h1 class="product-title">For One Clásica</h1>

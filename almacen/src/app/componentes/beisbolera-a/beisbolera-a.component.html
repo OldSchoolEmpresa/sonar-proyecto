@@ -35,22 +35,62 @@
   <div class="product-container">
     <div class="product-images">
       <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/Beisbolera azul clarito.webp" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Beisbolera azul clarito.webp')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Beisbolera Morado.webp" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/Beisbolera Morado.webp')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Beisbolera negro.webp" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Beisbolera negro.webp')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Beisbolera Roja.webp" alt="Vista 3" onmouseenter="cambiarImagen('asset/img/Beisbolera Roja.webp')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Beisbolera verde.webp" alt="Vista 4" onmouseenter="cambiarImagen('asset/img/Beisbolera verde.webp')">
-        </div>
-      </div>
+         <div class="thumbnail active">
+      <img 
+        src="asset/img/Beisbolera azul clarito.webp" 
+        alt="Vista principal"
+        role="button"
+        tabindex="0"
+        aria-label="Vista principal"
+        (mouseenter)="cambiarImagen('asset/img/Beisbolera azul clarito.webp')"
+        (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Beisbolera azul clarito.webp')"
+      >
+    </div>
+    <div class="thumbnail">
+      <img 
+        src="asset/img/Beisbolera Morado.webp" 
+        alt="Vista 1"
+        role="button"
+        tabindex="0"
+        aria-label="Vista 1"
+        (mouseenter)="cambiarImagen('asset/img/Beisbolera Morado.webp')"
+        (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Beisbolera Morado.webp')"
+      >
+    </div>
+    <div class="thumbnail">
+      <img 
+        src="asset/img/Beisbolera negro.webp" 
+        alt="Vista 2"
+        role="button"
+        tabindex="0"
+        aria-label="Vista 2"
+        (mouseenter)="cambiarImagen('asset/img/Beisbolera negro.webp')"
+        (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Beisbolera negro.webp')"
+      >
+    </div>
+    <div class="thumbnail">
+      <img 
+        src="asset/img/Beisbolera Roja.webp" 
+        alt="Vista 3"
+        role="button"
+        tabindex="0"
+        aria-label="Vista 3"
+        (mouseenter)="cambiarImagen('asset/img/Beisbolera Roja.webp')"
+        (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Beisbolera Roja.webp')"
+      >
+    </div>
+    <div class="thumbnail">
+      <img 
+        src="asset/img/Beisbolera verde.webp" 
+        alt="Vista 4"
+        role="button"
+        tabindex="0"
+        aria-label="Vista 4"
+        (mouseenter)="cambiarImagen('asset/img/Beisbolera verde.webp')"
+        (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Beisbolera verde.webp')"
+      >
+    </div>
+  </div>
 
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Beisbolera azul clarito.webp" alt="Buzo Los Angeles">

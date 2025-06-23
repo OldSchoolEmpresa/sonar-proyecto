@@ -35,22 +35,63 @@
   <div class="product-container">
     <div class="product-images">
       <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/buso los angeles negra.jpg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/buso los angeles negra.jpg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Buso los angeles blanco.jpg" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/Buso los angeles blanco.jpg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Buso los angeles verde.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Buso los angeles verde.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Buso los angeles azul.jpeg" alt="Vista 3" onmouseenter="cambiarImagen('asset/img/Buso los angeles azul.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/los angeles rojo.jpeg" alt="Vista 4" onmouseenter="cambiarImagen('asset/img/los angeles rojo.jpeg')">
-        </div>
-      </div>
+  <div class="thumbnail active">
+    <img 
+      src="asset/img/buso los angeles negra.jpg" 
+      alt="Vista principal"
+      role="button"
+      tabindex="0"
+      aria-label="Vista principal"
+      (mouseenter)="cambiarImagen('asset/img/buso los angeles negra.jpg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/buso los angeles negra.jpg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/Buso los angeles blanco.jpg" 
+      alt="Vista 1"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 1"
+      (mouseenter)="cambiarImagen('asset/img/Buso los angeles blanco.jpg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Buso los angeles blanco.jpg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/Buso los angeles verde.jpeg" 
+      alt="Vista 2"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 2"
+      (mouseenter)="cambiarImagen('asset/img/Buso los angeles verde.jpeg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Buso los angeles verde.jpeg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/Buso los angeles azul.jpeg" 
+      alt="Vista 3"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 3"
+      (mouseenter)="cambiarImagen('asset/img/Buso los angeles azul.jpeg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Buso los angeles azul.jpeg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/los angeles rojo.jpeg" 
+      alt="Vista 4"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 4"
+      (mouseenter)="cambiarImagen('asset/img/los angeles rojo.jpeg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/los angeles rojo.jpeg')"
+    >
+  </div>
+</div>
+
 
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/buso los angeles negra.jpg" alt="Buzo Los Angeles">

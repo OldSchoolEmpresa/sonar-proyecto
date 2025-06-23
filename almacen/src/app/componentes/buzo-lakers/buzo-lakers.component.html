@@ -34,20 +34,53 @@
 
   <div class="product-container">
     <div class="product-images">
-      <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/Lakers Blanco.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Lakers Blanco.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/LAKERS AMARILLO.jpg" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/LAKERS AMARILLO.jpg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/LAKERS MORADO.jpg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/LAKERS MORADO.jpg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/LAKERS NEGRO.jpg" alt="Vista 3" onmouseenter="cambiarImagen('asset/img/LAKERS NEGRO.jpg')">
-        </div>
-      </div>
+     <div class="thumbnails">
+  <div class="thumbnail active">
+    <img 
+      src="asset/img/Lakers Blanco.jpeg" 
+      alt="Vista principal"
+      role="button"
+      tabindex="0"
+      aria-label="Vista principal"
+      (mouseenter)="cambiarImagen('asset/img/Lakers Blanco.jpeg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Lakers Blanco.jpeg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/LAKERS AMARILLO.jpg" 
+      alt="Vista 1"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 1"
+      (mouseenter)="cambiarImagen('asset/img/LAKERS AMARILLO.jpg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/LAKERS AMARILLO.jpg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/LAKERS MORADO.jpg" 
+      alt="Vista 2"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 2"
+      (mouseenter)="cambiarImagen('asset/img/LAKERS MORADO.jpg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/LAKERS MORADO.jpg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/LAKERS NEGRO.jpg" 
+      alt="Vista 3"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 3"
+      (mouseenter)="cambiarImagen('asset/img/LAKERS NEGRO.jpg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/LAKERS NEGRO.jpg')"
+    >
+  </div>
+</div>
+
 
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Lakers Blanco.jpeg" alt="Buzo Los Angeles">

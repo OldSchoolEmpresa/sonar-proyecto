@@ -35,18 +35,41 @@
   <div class="product-container">
     <div class="product-images">
       <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/boston morado.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/boston morado.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Boston verde.jpeg" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/Boston verde.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Boston negro.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Boston negro.jpeg')">
-        </div>
-       
-       
-      </div>
+  <div class="thumbnail active">
+    <img 
+      src="asset/img/boston morado.jpeg" 
+      alt="Vista principal"
+      role="button"
+      tabindex="0"
+      aria-label="Vista principal"
+      (mouseenter)="cambiarImagen('asset/img/boston morado.jpeg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/boston morado.jpeg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/Boston verde.jpeg" 
+      alt="Vista 1"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 1"
+      (mouseenter)="cambiarImagen('asset/img/Boston verde.jpeg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Boston verde.jpeg')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/Boston negro.jpeg" 
+      alt="Vista 2"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 2"
+      (mouseenter)="cambiarImagen('asset/img/Boston negro.jpeg')"
+      (keydown)="if($event.key === 'Enter') cambiarImagen('asset/img/Boston negro.jpeg')"
+    >
+  </div>
+</div>
+
 
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/boston morado.jpeg" alt="Buzo Los Angeles">

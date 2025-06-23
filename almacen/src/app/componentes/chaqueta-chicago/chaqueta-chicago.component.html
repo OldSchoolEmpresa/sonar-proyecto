@@ -35,17 +35,41 @@
   <div class="product-container">
     <div class="product-images">
       <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/chaqueta chicago negro.webp" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/chaqueta chicago negro.webp')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/chaqueta chicago beach.webp" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/chaqueta chicago beach.webp')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/chaqueta chicago verde.webp" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/chaqueta chicago verde.webp')">
-        </div>
-       
-      </div>
+  <div class="thumbnail active">
+    <img 
+      src="asset/img/chaqueta chicago negro.webp" 
+      alt="Vista principal"
+      role="button"
+      tabindex="0"
+      aria-label="Vista principal"
+      onmouseenter="cambiarImagen('asset/img/chaqueta chicago negro.webp')"
+      onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/chaqueta chicago negro.webp')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/chaqueta chicago beach.webp" 
+      alt="Vista 1"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 1"
+      onmouseenter="cambiarImagen('asset/img/chaqueta chicago beach.webp')"
+      onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/chaqueta chicago beach.webp')"
+    >
+  </div>
+  <div class="thumbnail">
+    <img 
+      src="asset/img/chaqueta chicago verde.webp" 
+      alt="Vista 2"
+      role="button"
+      tabindex="0"
+      aria-label="Vista 2"
+      onmouseenter="cambiarImagen('asset/img/chaqueta chicago verde.webp')"
+      onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/chaqueta chicago verde.webp')"
+    >
+  </div>
+</div>
+
 
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/chaqueta chicago negro.webp" alt="Buzo Los Angeles">
@@ -53,7 +77,7 @@
     </div>
 
     <div class="product-details">
-      <h1 class="product-title"></h1>
+      <h1 class="product-title">Chaqueta Chicago</h1>
       <div class="product-price">$190.000</div>
 
       <div class="color-options">

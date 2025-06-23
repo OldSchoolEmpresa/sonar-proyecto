@@ -11,21 +11,21 @@
           <img [src]="pedido.imagenActual" 
                [alt]="pedido.producto.nombre + ' ' + pedido.colorSeleccionado.nombre">
           <div class="puntos-navegacion">
-             <button *ngFor="let img of pedido.colorSeleccionado.imagenes; let i = index"
+            <button *ngFor="let img of pedido.colorSeleccionado.imagenes; let i = index"
           type="button"
-          class="punto"
+          class="selector-imagen"
           [class.activo]="i === pedido.indiceImagen"
           (click)="seleccionarImagen(i)"
+          (keydown)="event.key === 'Enter' && seleccionarImagen(i)"
           aria-label="Seleccionar imagen {{ i + 1 }}">
   </button>
           </div>
         </div>
         
           
-        <!-- Detalle del producto -->
-<div class="detalle-producto">
+        <div class="detalle-producto">
   <h3>
-    {{pedido.producto.nombre}} 
+    {{pedido.producto.nombre}}
     <span class="color-tag" [style.background]="pedido.colorSeleccionado.codigo"></span>
   </h3>
   <p>{{pedido.producto.descripcion}}</p>
@@ -34,7 +34,8 @@
   <div class="opciones-color">
     <h4>Selecciona tu color:</h4>
     <div class="colores-disponibles">
-      <button *ngFor="let color of productoActual.colores" 
+      <button *ngFor="let color of productoActual.colores"
+              type="button"
               class="color-option"
               [style.background]="color.codigo"
               [class.selected]="pedido.colorSeleccionado.nombre === color.nombre"
@@ -49,8 +50,8 @@
 
   <div class="opciones">
     <div>
-      <label>Talla:</label>
-      <select [(ngModel)]="pedido.talla">
+      <label for="talla">Talla:</label>
+      <select id="talla" name="talla" [(ngModel)]="pedido.talla">
         <option value="">Seleccionar</option>
         <option value="S">S</option>
         <option value="M">M</option>
@@ -60,25 +61,28 @@
     </div>
 
     <div>
-      <label>Cantidad:</label>
-      <input type="number" [(ngModel)]="pedido.cantidad" min="1">
+      <label for="cantidad">Cantidad:</label>
+      <input id="cantidad" name="cantidad" type="number" [(ngModel)]="pedido.cantidad" min="1">
     </div>
   </div>
 </div>
 
-<!-- Botón de continuar -->
 <button class="btn-continuar" (click)="confirmarCompra()">
   <i class="fas fa-shopping-cart"></i> Continuar con la compra
 </button>
 
-<!-- Confirmación del pedido -->
+<!-- Paso 2: Confirmación final del pedido -->
 <div class="confirmacion-pedido" *ngIf="mostrarConfirmacion">
   <h2>Resumen de tu Pedido</h2>
 
   <div class="resumen-producto">
     <h3>Producto:</h3>
-    <img [src]="pedido.imagenActual" [alt]="pedido.producto.nombre + ' ' + pedido.colorSeleccionado.nombre">
-    <p>{{pedido.producto.nombre}} - {{pedido.colorSeleccionado.nombre}} - Talla {{pedido.talla}}</p>
+    <img [src]="pedido.imagenActual"
+         [alt]="pedido.producto.nombre + ' ' + pedido.colorSeleccionado.nombre">
+    <p>
+      {{pedido.producto.nombre}} - {{pedido.colorSeleccionado.nombre}} -
+      Talla {{pedido.talla}}
+    </p>
     <p>Cantidad: {{pedido.cantidad}}</p>
     <p>Total: {{formatPrice(pedido.producto.precio * pedido.cantidad)}}</p>
   </div>
@@ -92,24 +96,38 @@
   <div class="datos-usuario">
     <h3>Tus Datos:</h3>
     <div>
-      <label>Nombre completo:</label>
-      <input type="text" [(ngModel)]="pedido.usuario.nombre" placeholder="Ej: Juan Pérez">
+      <label for="nombreUsuario">Nombre completo:</label>
+      <input id="nombreUsuario"
+             name="nombreUsuario"
+             type="text"
+             [(ngModel)]="pedido.usuario.nombre"
+             placeholder="Ej: Juan Pérez">
     </div>
     <div>
-      <label>Dirección de envío:</label>
-      <input type="text" [(ngModel)]="pedido.usuario.direccion" placeholder="Ej: Calle 123 # 45-67">
+      <label for="direccionUsuario">Dirección de envío:</label>
+      <input id="direccionUsuario"
+             name="direccionUsuario"
+             type="text"
+             [(ngModel)]="pedido.usuario.direccion"
+             placeholder="Ej: Calle 123 # 45-67">
     </div>
     <div>
-      <label>Teléfono:</label>
-      <input type="tel" [(ngModel)]="pedido.usuario.telefono" placeholder="Ej: 3001234567">
+      <label for="telefonoUsuario">Teléfono:</label>
+      <input id="telefonoUsuario"
+             name="telefonoUsuario"
+             type="tel"
+             [(ngModel)]="pedido.usuario.telefono"
+             placeholder="Ej: 3001234567">
     </div>
     <div>
-      <label>Email:</label>
-      <input type="email" [(ngModel)]="pedido.usuario.email" placeholder="Ej: ejemplo@correo.com">
+      <label for="emailUsuario">Email:</label>
+      <input id="emailUsuario"
+             name="emailUsuario"
+             type="email"
+             [(ngModel)]="pedido.usuario.email"
+             placeholder="Ej: ejemplo@correo.com">
     </div>
   </div>
-</div>
-      
       
       <div class="acciones">
         <button (click)="mostrarConfirmacion = false">Atrás</button>

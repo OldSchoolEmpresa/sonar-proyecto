@@ -8,6 +8,9 @@
     use App\Http\Controllers\CrudInventarioController;
     use App\Http\Controllers\LoginAdministrador;
     use App\Http\Controllers\LoginController;
+    use App\Http\Controllers\HomeController;
+
+
 
 
 

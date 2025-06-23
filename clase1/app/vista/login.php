@@ -2,6 +2,8 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
+use App\Http\Controllers\HomeController;
+
 
 require_once '../modelo/conexion.php';
 

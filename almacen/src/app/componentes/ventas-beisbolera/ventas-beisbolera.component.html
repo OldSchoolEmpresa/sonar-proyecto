@@ -11,14 +11,16 @@
           <img [src]="pedido.imagenActual" 
                [alt]="pedido.producto.nombre + ' ' + pedido.colorSeleccionado.nombre">
           <div class="puntos-navegacion">
-            <span *ngFor="let img of pedido.colorSeleccionado.imagenes; let i = index"
-      [class.activo]="i === pedido.indiceImagen"
-      tabindex="0"
-      role="button"
-      (click)="seleccionarImagen(i)"
-      (keydown)="event.key === 'Enter' && seleccionarImagen(i)">
+            <span
+  *ngFor="let img of pedido.colorSeleccionado.imagenes; let i = index"
+  [class.activo]="i === pedido.indiceImagen"
+  tabindex="0"
+  role="button"
+  (click)="seleccionarImagen(i)"
+  (keydown)="handleKeyDown($event, i)">
+  <!-- Aquí puedes mostrar la imagen, por ejemplo: -->
+  <img [src]="img" alt="Imagen del producto">
 </span>
-
           </div>
         </div>
         

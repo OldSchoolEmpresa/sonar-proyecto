@@ -3,57 +3,61 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\File;
 
 class PanelController extends Controller
 {
+    /**
+     * Método privado reutilizable para cargar y renderizar archivos PHP como respuesta HTML.
+     */
+    private function renderPHPFile($relativePath)
+    {
+        $fullPath = base_path($relativePath);
+
+        if (!File::exists($fullPath)) {
+            abort(404, "Archivo no encontrado: $relativePath");
+        }
+
+        ob_start();
+        include_once $fullPath;
+        $content = ob_get_clean();
+
+        return response($content, 200)
+            ->header('Content-Type', 'text/html');
+    }
+
     public function administrador()
-{
-    ob_start();
-   class TuControlador
-{
+    {
+        return $this->renderPHPFile('public/administrador.php');
+    }
+
     public function inicio()
     {
-        include_once 'app/vista/inicio.php';
-        exit;
+        return $this->renderPHPFile('app/vista/inicio.php');
     }
 
     public function modelo()
     {
-        ob_start();
-        include_once 'app/modelo/modelo.php';
-        $contenido = ob_get_clean();
-        devolverrespuesta($contenido, 200)->encabezado('Content-Type', 'text/html');
+        return $this->renderPHPFile('app/modelo/modelo.php');
     }
 
     public function inventario()
     {
-        ob_start();
-        include_once 'app/vista/inventario.php';
-        $contenido = ob_get_clean();
-        devolverrespuesta($contenido, 200)->encabezado('Content-Type', 'text/html');
+        return $this->renderPHPFile('app/vista/inventario.php');
     }
 
     public function ganancias()
     {
-        ob_start();
-        include_once 'app/vista/ganancias.php';
-        $contenido = ob_get_clean();
-        devolverrespuesta($contenido, 200)->encabezado('Content-Type', 'text/html');
+        return $this->renderPHPFile('app/vista/ganancias.php');
     }
 
     public function configuracion()
     {
-        ob_start();
-        include_once 'app/vista/configuracion.php';
-        $contenido = ob_get_clean();
-        devolverrespuesta($contenido, 200)->encabezado('Content-Type', 'text/html');
+        return $this->renderPHPFile('app/vista/configuracion.php');
     }
 
-    public function cerrarSesion()
+    public function logout()
     {
-        ob_start();
-        include_once 'app/vista/logout.php';
-        $contenido = ob_get_clean();
-        devolverrespuesta($contenido, 200)->encabezado('Content-Type', 'text/html');
+        return $this->renderPHPFile('app/vista/logout.php');
     }
 }

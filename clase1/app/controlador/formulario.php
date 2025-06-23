@@ -1,5 +1,6 @@
 <?php
 require_once 'conexion.php';
+use App\Http\Controllers\HomeController;
 
 
 $data = json_decode(file_get_contents("php://input"));

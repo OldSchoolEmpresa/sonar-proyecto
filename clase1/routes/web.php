@@ -8,7 +8,6 @@
     use App\Http\Controllers\CrudInventarioController;
     use App\Http\Controllers\LoginAdministrador;
     use App\Http\Controllers\LoginController;
-    use App\Http\Controllers\HomeController;
 
 
 
@@ -57,5 +56,4 @@ Route::get('/panel/logout', [PanelController::class, 'logout']);
         if (!file_exists('modelo/modelo.php')) {
     die('Error: No se pudo encontrar el archivo modelo.php');
 }
-require_once 'modelo/modelo.php';
     });

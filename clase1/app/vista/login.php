@@ -5,7 +5,6 @@ header("Content-Type: application/json");
 use App\Http\Controllers\HomeController;
 
 
-require_once '../modelo/conexion.php';
 
 $datos = json_decode(file_get_contents("php://input"));
 

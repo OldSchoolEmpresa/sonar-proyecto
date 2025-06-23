@@ -301,6 +301,25 @@ export class ProductosService {
       }
     ]
   },
+  {
+    id: 11,
+    nombre: 'Chaqueta A',
+    precio: 200000,
+    descripcion: 'Chaqueta edición limitada',
+    tiempoEntrega: '3-5 días hábiles',
+    colores: [
+      {
+        nombre: 'Negro',
+        codigo: '#000000',
+        imagenes: ['/assets/img/chaqueta-negra.jpg']
+      },
+      {
+        nombre: 'Gris',
+        codigo: '#888888',
+        imagenes: ['/assets/img/chaqueta-gris.jpg']
+      }
+    ]
+  },
   ];
 
   getProductoPorId(id: number): Producto | undefined {

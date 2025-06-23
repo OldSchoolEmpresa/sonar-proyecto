@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Response;
@@ -10,54 +9,54 @@ class PanelController extends Controller
     /**
      * Método privado reutilizable para cargar y renderizar archivos PHP como respuesta HTML.
      */
-    private function renderPHPFile($relativePath)
+    private function renderizarPHPFile($rutaRelativa)
     {
-        $fullPath = base_path($relativePath);
-
-        if (!File::exists($fullPath)) {
-            abort(404, "Archivo no encontrado: $relativePath");
+        $rutaCompleta = base_path($rutaRelativa);
+        if (!File::exists($rutaCompleta)) {
+            abort(404, "Archivo no encontrado: $rutaRelativa");
         }
 
         ob_start();
-        include_once $fullPath;
-        $content = ob_get_clean();
+        require_once $rutaCompleta;
+        $contenido = ob_get_clean();
 
-        return response($content, 200)
+        return response($contenido, 200)
             ->header('Content-Type', 'text/html');
     }
 
     public function administrador()
     {
-        return $this->renderPHPFile('public/administrador.php');
+        return $this->renderizarPHPFile('public/administrador.php');
     }
 
     public function inicio()
     {
-        return $this->renderPHPFile('app/vista/inicio.php');
+        return $this->renderizarPHPFile('app/vista/inicio.php');
     }
 
     public function modelo()
     {
-        return $this->renderPHPFile('app/modelo/modelo.php');
+        return $this->renderizarPHPFile('app/modelo/modelo.php');
     }
 
     public function inventario()
     {
-        return $this->renderPHPFile('app/vista/inventario.php');
+        return $this->renderizarPHPFile('app/vista/inventario.php');
     }
 
     public function ganancias()
     {
-        return $this->renderPHPFile('app/vista/ganancias.php');
+        return $this->renderizarPHPFile('app/vista/ganancias.php');
     }
 
     public function configuracion()
     {
-        return $this->renderPHPFile('app/vista/configuracion.php');
+        return $this->renderizarPHPFile('app/vista/configuracion.php');
     }
 
-    public function logout()
+    public function cerrarSesion()
     {
-        return $this->renderPHPFile('app/vista/logout.php');
+        return $this->renderizarPHPFile('app/vista/logout.php');
     }
 }
+

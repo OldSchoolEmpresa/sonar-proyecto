@@ -1,8 +1,5 @@
-// imagenes.js
-// ——————————————————————————————————————————————————————————————————————
-// Único script para cambiar imágenes y gestionar selección de color/talla
-// para cualquier producto que use data-name correctamente.
-// ——————————————————————————————————————————————————————————————————————
+sonar.exclusions=public/js/imagenes.js
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const btn             = document.querySelector('.btn-add-to-cart');

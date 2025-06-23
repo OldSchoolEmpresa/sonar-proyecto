@@ -1,5 +1,6 @@
 // public/js/boston-imagenes.js
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const mainImage      = document.getElementById('mainImage');
     const addBtn         = document.querySelector('.btn-add-to-cart');

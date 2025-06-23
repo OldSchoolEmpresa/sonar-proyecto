@@ -867,40 +867,43 @@ h1 {
         <div class="modal-body">
           <form id="agregarProductoForm">
             <div class="mb-3">
-              <label class="form-label">Nombre</label>
-              <input type="text" name="Nombre" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Categoría</label>
-              <input type="text" name="Categoria" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Precio</label>
-              <input type="number" name="Precio" class="form-control" step="0.01" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Stock</label>
-              <input type="number" name="Stock" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Vendidos</label>
-              <input type="number" name="Vendidos" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Fecha Llegada</label>
-              <input type="date" name="fecha_llegada" class="form-control">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Fecha Salida</label>
-              <input type="date" name="fecha_salida" class="form-control">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Estado</label>
-              <select name="Estado" class="form-select">
-                <option value="1">Activo</option>
-                <option value="0">Inactivo</option>
-              </select>
-            </div>
+  <label for="categoria" class="etiqueta-de-formulario">Categoría</label>
+  <input id="categoria" type="text" name="Categoría" class="form-control" required>
+</div>
+
+<div class="mb-3">
+  <label for="precio" class="etiqueta-de-formulario">Precio</label>
+  <input id="precio" type="number" name="Precio" class="form-control" step="0.01" required>
+</div>
+
+<div class="mb-3">
+  <label for="stock" class="etiqueta-de-formulario">Stock</label>
+  <input id="stock" type="number" name="Stock" class="form-control" required>
+</div>
+
+<div class="mb-3">
+  <label for="vendidos" class="etiqueta-de-formulario">Vendidos</label>
+  <input id="vendidos" type="number" name="Vendidos" class="form-control" required>
+</div>
+
+<div class="mb-3">
+  <label for="fecha_llegada" class="etiqueta-de-formulario">Fecha de llegada</label>
+  <input id="fecha_llegada" type="date" name="fecha_llegada" class="form-control">
+</div>
+
+<div class="mb-3">
+  <label for="fecha_salida" class="etiqueta-de-formulario">Fecha Salida</label>
+  <input id="fecha_salida" type="date" name="fecha_salida" class="form-control">
+</div>
+
+<div class="mb-3">
+  <label for="estado" class="etiqueta-de-formulario">Estado</label>
+  <select id="estado" name="Estado" class="form-select">
+    <option value="1">Activo</option>
+    <option value="0">Inactivo</option>
+  </select>
+</div>
+
             <button type="submit" class="btn btn-custom w-100">Agregar</button>
           </form>
         </div>

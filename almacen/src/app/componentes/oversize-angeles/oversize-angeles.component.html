@@ -34,16 +34,34 @@
   <div class="product-container">
     <div class="product-images">
       <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/Oversize angeles 1.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Oversize angeles 1.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Oversize angeles 2.jpeg" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/Oversize angeles 2.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Oversize angeles 3.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Oversize angeles 3.jpeg')">
-        </div>
-      </div>
+  <button 
+    class="thumbnail active" 
+    aria-label="Vista principal - Oversize Ángeles"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize angeles 1.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize angeles 1.jpeg')">
+    <img src="asset/img/Oversize angeles 1.jpeg" alt="Vista principal - Oversize Ángeles">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista lateral - Oversize Ángeles"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize angeles 2.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize angeles 2.jpeg')">
+    <img src="asset/img/Oversize angeles 2.jpeg" alt="Vista lateral - Oversize Ángeles">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista detalle - Oversize Ángeles"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize angeles 3.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize angeles 3.jpeg')">
+    <img src="asset/img/Oversize angeles 3.jpeg" alt="Vista detalle - Oversize Ángeles">
+  </button>
+</div>
+
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Oversize angeles 1.jpeg" alt="Gorra Manfinity Sporsky">
       </div>

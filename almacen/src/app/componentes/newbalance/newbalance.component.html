@@ -29,17 +29,35 @@
   
     <div class="product-container">
       <div class="product-images">
-        <div class="thumbnails">
-          <div class="thumbnail active">
-            <img src="asset/img/new balance 550 azul.jpg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/new balance 550 azul.jpg')">
-          </div>
-          <div class="thumbnail">
-            <img src="asset/img/new balance 550 morado.jpg" alt="Vista lateral" onmouseenter="cambiarImagen('asset/img/new balance 550 morado.jpg')">
-          </div>
-          <div class="thumbnail">
-            <img src="asset/img/new balance 550 rojo.jpg" alt="Vista detalle" onmouseenter="cambiarImagen('asset/img/new balance 550 rojo.jpg')">
-          </div>
-        </div>
+       <div class="thumbnails">
+  <button 
+    class="thumbnail active" 
+    aria-label="Zapatilla New Balance 550 azul"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/new balance 550 azul.jpg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/new balance 550 azul.jpg')">
+    <img src="asset/img/new balance 550 azul.jpg" alt="Zapatilla New Balance 550 azul">
+  </button>
+
+  <button 
+    class="thumbnail" 
+    aria-label="Zapatilla New Balance 550 morado"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/new balance 550 morado.jpg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/new balance 550 morado.jpg')">
+    <img src="asset/img/new balance 550 morado.jpg" alt="Zapatilla New Balance 550 morado">
+  </button>
+
+  <button 
+    class="thumbnail" 
+    aria-label="Zapatilla New Balance 550 rojo"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/new balance 550 rojo.jpg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/new balance 550 rojo.jpg')">
+    <img src="asset/img/new balance 550 rojo.jpg" alt="Zapatilla New Balance 550 rojo">
+  </button>
+</div>
+
         <div class="main-image">
           <img id="mainImage" class="img-full" src="asset/img/new balance 550 azul.jpg" alt="New Balance 550">
         </div>

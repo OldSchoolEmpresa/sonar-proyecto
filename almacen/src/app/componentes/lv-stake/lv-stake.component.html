@@ -30,22 +30,52 @@
   <div class="product-container">
     <div class="product-images">
       <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/Lv gris nueva.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Lv gris nueva.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Lv Stake 2.jpeg" alt="Vista lateral" onmouseenter="cambiarImagen('asset/img/Lv Stake 2.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Lv Stake 3.jpeg" alt="Vista detalle" onmouseenter="cambiarImagen('asset/img/Lv Stake 3.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Lv Stake 5.jpeg" alt="Vista posterior" onmouseenter="cambiarImagen('asset/img/Lv Stake 5.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Lv Stake 1.jpeg" alt="Vista posterior" onmouseenter="cambiarImagen('asset/img/Lv Stake 1.jpeg')">
-        </div>
-      </div>
+  <button 
+    class="thumbnail active" 
+    aria-label="Vista principal"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Lv gris nueva.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Lv gris nueva.jpeg')">
+    <img src="asset/img/Lv gris nueva.jpeg" alt="Vista principal">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista lateral"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Lv Stake 2.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Lv Stake 2.jpeg')">
+    <img src="asset/img/Lv Stake 2.jpeg" alt="Vista lateral">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista detalle"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Lv Stake 3.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Lv Stake 3.jpeg')">
+    <img src="asset/img/Lv Stake 3.jpeg" alt="Vista detalle">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista posterior"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Lv Stake 5.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Lv Stake 5.jpeg')">
+    <img src="asset/img/Lv Stake 5.jpeg" alt="Vista posterior">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista posterior alternativa"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Lv Stake 1.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Lv Stake 1.jpeg')">
+    <img src="asset/img/Lv Stake 1.jpeg" alt="Vista posterior alternativa">
+  </button>
+</div>
+
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Lv gris nueva.jpeg" alt="Air Max 90">
       </div>

@@ -29,14 +29,26 @@
   
     <div class="product-container">
       <div class="product-images">
-        <div class="thumbnails">
-          <div class="thumbnail active">
-            <img src="asset/img/nike sb morado.jpg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/nike sb morado.jpg')">
-          </div>
-          <div class="thumbnail">
-            <img src="asset/img/nike sb azul.jpg" alt="Vista lateral" onmouseenter="cambiarImagen('asset/img/nike sb azul.jpg')">
-          </div>
-        </div>
+       <div class="thumbnails">
+  <button 
+    class="thumbnail active" 
+    aria-label="Zapatilla Nike SB morado"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/nike sb morado.jpg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/nike sb morado.jpg')">
+    <img src="asset/img/nike sb morado.jpg" alt="Zapatilla Nike SB morado">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Zapatilla Nike SB azul"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/nike sb azul.jpg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/nike sb azul.jpg')">
+    <img src="asset/img/nike sb azul.jpg" alt="Zapatilla Nike SB azul">
+  </button>
+</div>
+
         <div class="main-image">
           <img id="mainImage" class="img-full" src="asset/img/nike sb morado.jpg" alt="New Balance 550">
         </div>

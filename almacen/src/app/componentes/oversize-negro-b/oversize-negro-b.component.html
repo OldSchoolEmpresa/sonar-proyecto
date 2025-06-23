@@ -34,22 +34,52 @@
   <div class="product-container">
     <div class="product-images">
       <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/Beisboleras negra blanca.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Beisboleras negra blanca.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Oversize negro-b 1.jpeg" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/Oversize negro-b 1.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Oversize negro-b 2.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Oversize negro-b 2.jpeg')">
-        </div>
-        <div class="thumbnail">
-            <img src="asset/img/Oversize negro-b 3.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Oversize negro-b 3.jpeg')">
-          </div>
-          <div class="thumbnail">
-            <img src="asset/img/Oversize negro-b 4.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Oversize negro-b 4.jpeg')">
-          </div>
-      </div>
+  <button 
+    class="thumbnail active" 
+    aria-label="Vista principal - Beisbolera negra y blanca"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Beisboleras negra blanca.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Beisboleras negra blanca.jpeg')">
+    <img src="asset/img/Beisboleras negra blanca.jpeg" alt="Vista principal - Beisbolera negra y blanca">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista lateral - Oversize negro b"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize negro-b 1.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize negro-b 1.jpeg')">
+    <img src="asset/img/Oversize negro-b 1.jpeg" alt="Vista lateral - Oversize negro b">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista posterior - Oversize negro b"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize negro-b 2.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize negro-b 2.jpeg')">
+    <img src="asset/img/Oversize negro-b 2.jpeg" alt="Vista posterior - Oversize negro b">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista detalle 1 - Oversize negro b"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize negro-b 3.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize negro-b 3.jpeg')">
+    <img src="asset/img/Oversize negro-b 3.jpeg" alt="Vista detalle 1 - Oversize negro b">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista detalle 2 - Oversize negro b"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize negro-b 4.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize negro-b 4.jpeg')">
+    <img src="asset/img/Oversize negro-b 4.jpeg" alt="Vista detalle 2 - Oversize negro b">
+  </button>
+</div>
+
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Beisboleras negra blanca.jpeg" alt="Gorra Manfinity Sporsky">
       </div>

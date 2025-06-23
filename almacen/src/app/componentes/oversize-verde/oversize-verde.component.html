@@ -34,16 +34,34 @@
   <div class="product-container">
     <div class="product-images">
       <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/Oversize verde 1.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Oversize verde 1.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Oversize verde 2.jpeg" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/Oversize verde 2.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Oversize verde 3.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Oversize verde 3.jpeg')">
-        </div>
-      </div>
+  <button 
+    class="thumbnail active" 
+    aria-label="Vista principal - Oversize verde"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize verde 1.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize verde 1.jpeg')">
+    <img src="asset/img/Oversize verde 1.jpeg" alt="Vista principal - Oversize verde">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista lateral - Oversize verde"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize verde 2.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize verde 2.jpeg')">
+    <img src="asset/img/Oversize verde 2.jpeg" alt="Vista lateral - Oversize verde">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista posterior - Oversize verde"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize verde 3.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize verde 3.jpeg')">
+    <img src="asset/img/Oversize verde 3.jpeg" alt="Vista posterior - Oversize verde">
+  </button>
+</div>
+
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Oversize verde 1.jpeg" alt="Gorra Manfinity Sporsky">
       </div>

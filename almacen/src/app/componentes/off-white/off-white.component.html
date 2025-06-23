@@ -30,23 +30,25 @@
     <div class="product-container">
       <div class="product-images">
         <div class="thumbnails">
-         <div class="thumbnail active">
-  <img src="asset/img/Off-White verde.jpeg"
-       alt="Vista principal"
-       tabindex="0"
-       onmouseenter="cambiarImagen('asset/img/Off-White verde.jpeg')"
-       onkeydown="if(event.key==='Enter') cambiarImagen('asset/img/Off-White verde.jpeg')">
+  <button 
+    class="thumbnail active" 
+    aria-label="Zapatilla Off-White verde"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Off-White verde.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Off-White verde.jpeg')">
+    <img src="asset/img/Off-White verde.jpeg" alt="Zapatilla Off-White verde">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Zapatilla Off-White blanco"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Off-White blanco.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Off-White blanco.jpeg')">
+    <img src="asset/img/Off-White blanco.jpeg" alt="Zapatilla Off-White blanco">
+  </button>
 </div>
 
-<div class="thumbnail">
-  <img src="asset/img/Off-White blanco.jpeg"
-       alt="Vista lateral"
-       tabindex="0"
-       onmouseenter="cambiarImagen('asset/img/Off-White blanco.jpeg')"
-       onkeydown="if(event.key==='Enter') cambiarImagen('asset/img/Off-White blanco.jpeg')">
-</div>
-
-        </div>
         <div class="main-image">
           <img id="mainImage" class="img-full" src="asset/img/Off-White verde.jpeg" alt="New Balance 550">
         </div>

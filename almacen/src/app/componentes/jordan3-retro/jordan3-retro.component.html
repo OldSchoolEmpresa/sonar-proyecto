@@ -30,19 +30,43 @@
   <div class="product-container">
     <div class="product-images">
       <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/Jordan Retro.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Jordan Retro.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Jordan Retro derecha1.jpeg" alt="Vista lateral" onmouseenter="cambiarImagen('asset/img/Jordan Retro derecha1.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Jordan Retro derecha.jpeg" alt="Vista detalle" onmouseenter="cambiarImagen('asset/img/Jordan Retro derecha.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Jordan Retro Atras.jpeg" alt="Vista posterior" onmouseenter="cambiarImagen('asset/img/Jordan Retro Atras.jpeg')">
-        </div>
-      </div>
+  <button 
+    class="thumbnail active"
+    aria-label="Vista principal"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Jordan Retro.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan Retro.jpeg')">
+    <img src="asset/img/Jordan Retro.jpeg" alt="Vista principal">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista lateral"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Jordan Retro derecha1.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan Retro derecha1.jpeg')">
+    <img src="asset/img/Jordan Retro derecha1.jpeg" alt="Vista lateral">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista detalle"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Jordan Retro derecha.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan Retro derecha.jpeg')">
+    <img src="asset/img/Jordan Retro derecha.jpeg" alt="Vista detalle">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista posterior"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Jordan Retro Atras.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan Retro Atras.jpeg')">
+    <img src="asset/img/Jordan Retro Atras.jpeg" alt="Vista posterior">
+  </button>
+</div>
+
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Jordan Retro.jpeg" alt="Air Max 90">
       </div>

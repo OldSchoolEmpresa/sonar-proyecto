@@ -33,23 +33,53 @@
 
   <div class="product-container">
     <div class="product-images">
-      <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/Beisboleras azul.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Beisboleras azul.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Oversize azul-m 1.jpeg" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/Oversize azul-m 1.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Oversize azul-m 2.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Oversize azul-m 2.jpeg')">
-        </div>
-        <div class="thumbnail">
-            <img src="asset/img/Oversize azul-m 3.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Oversize azul-m 3.jpeg')">
-          </div>
-          <div class="thumbnail">
-            <img src="asset/img/Oversize azul-m 4.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Oversize azul-m 4.jpeg')">
-          </div>
-      </div>
+     <div class="thumbnails">
+  <button 
+    class="thumbnail active" 
+    aria-label="Vista principal - Beisbolera azul"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Beisboleras azul.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Beisboleras azul.jpeg')">
+    <img src="asset/img/Beisboleras azul.jpeg" alt="Vista principal - Beisbolera azul">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista lateral 1 - Beisbolera azul"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize azul-m 1.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize azul-m 1.jpeg')">
+    <img src="asset/img/Oversize azul-m 1.jpeg" alt="Vista lateral 1 - Beisbolera azul">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista lateral 2 - Beisbolera azul"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize azul-m 2.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize azul-m 2.jpeg')">
+    <img src="asset/img/Oversize azul-m 2.jpeg" alt="Vista lateral 2 - Beisbolera azul">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista detalle 1 - Beisbolera azul"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize azul-m 3.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize azul-m 3.jpeg')">
+    <img src="asset/img/Oversize azul-m 3.jpeg" alt="Vista detalle 1 - Beisbolera azul">
+  </button>
+
+  <button 
+    class="thumbnail"
+    aria-label="Vista detalle 2 - Beisbolera azul"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Oversize azul-m 4.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Oversize azul-m 4.jpeg')">
+    <img src="asset/img/Oversize azul-m 4.jpeg" alt="Vista detalle 2 - Beisbolera azul">
+  </button>
+</div>
+
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Beisboleras azul.jpeg" alt="Gorra Manfinity Sporsky">
       </div>

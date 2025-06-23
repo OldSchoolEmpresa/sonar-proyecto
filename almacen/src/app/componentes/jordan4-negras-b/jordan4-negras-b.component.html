@@ -34,20 +34,44 @@
 
   <div class="product-container">
     <div class="product-images">
-      <div class="thumbnails">
-        <div class="thumbnail active">
-          <img src="asset/img/Jordan 3 negro blanco.jpeg" alt="Vista principal" onmouseenter="cambiarImagen('asset/img/Jordan 3 negro blanco.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Jordan 3 gris.jpeg" alt="Vista 1" onmouseenter="cambiarImagen('asset/img/Jordan 3 gris.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Jordan Retro 4.jpeg" alt="Vista 2" onmouseenter="cambiarImagen('asset/img/Jordan Retro 4.jpeg')">
-        </div>
-        <div class="thumbnail">
-          <img src="asset/img/Jordan 3 dorado.jpeg" alt="Vista 3" onmouseenter="cambiarImagen('asset/img/Jordan 3 dorado.jpeg')">
-        </div>
-      </div>
+     <div class="thumbnails">
+  <button 
+    class="thumbnail active" 
+    aria-label="Vista principal"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Jordan 3 negro blanco.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan 3 negro blanco.jpeg')">
+    <img src="asset/img/Jordan 3 negro blanco.jpeg" alt="Vista principal">
+  </button>
+
+  <button 
+    class="thumbnail" 
+    aria-label="Vista 1"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Jordan 3 gris.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan 3 gris.jpeg')">
+    <img src="asset/img/Jordan 3 gris.jpeg" alt="Vista 1">
+  </button>
+
+  <button 
+    class="thumbnail" 
+    aria-label="Vista 2"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Jordan Retro 4.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan Retro 4.jpeg')">
+    <img src="asset/img/Jordan Retro 4.jpeg" alt="Vista 2">
+  </button>
+
+  <button 
+    class="thumbnail" 
+    aria-label="Vista 3"
+    tabindex="0"
+    onmouseenter="cambiarImagen('asset/img/Jordan 3 dorado.jpeg')"
+    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan 3 dorado.jpeg')">
+    <img src="asset/img/Jordan 3 dorado.jpeg" alt="Vista 3">
+  </button>
+</div>
+
 
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Jordan 3 negro blanco.jpeg" alt="Buzo Los Angeles">

@@ -131,7 +131,176 @@ export class ProductosService {
       }
     ]
   },
-
+  {
+    id: 5,
+    nombre: 'Buzo Boston',
+    precio: 170000,
+    descripcion: 'Buzo Boston estilo retro, perfecta para clima frío y outfits urbanos.',
+    tiempoEntrega: '4-6 días hábiles',
+    colores: [
+      {
+        nombre: 'Azul Aqua',
+        codigo: '#2697ba',
+        imagenes: ['asset/img/boston morado.jpeg']
+      },
+      {
+        nombre: 'Verde Oliva',
+        codigo: '#9fb45c',
+        imagenes: ['asset/img/Boston verde.jpeg']
+      },
+      {
+        nombre: 'Negro',
+        codigo: '#000000',
+        imagenes: ['asset/img/Boston negro.jpeg']
+      }
+    ]
+  },
+  {
+    id: 6,
+    nombre: 'Chaqueta California',
+    precio: 180000,
+    descripcion: 'Chaqueta estilo vintage con diseño inspirado en California.',
+    tiempoEntrega: '3-5 días hábiles',
+    colores: [
+      {
+        nombre: 'Blanco',
+        codigo: '#f5f5dc',
+        imagenes: ['asset/img/chaqueta California Blanco.webp']
+      },
+      {
+        nombre: 'Negro',
+        codigo: '#000000',
+        imagenes: ['asset/img/chaqueta California negro.webp']
+      },
+      {
+        nombre: 'Dorado',
+        codigo: '#d49c00',
+        imagenes: ['/asset/img/chaqueta California Cafe.webp']
+      }
+    ]
+  },
+  {
+    id: 7,
+    nombre: 'Chaqueta Chicago',
+    precio: 190000,
+    descripcion: 'Chaqueta deportiva con diseño inspirado en Chicago.',
+    tiempoEntrega: '3-5 días hábiles',
+    colores: [
+      {
+        nombre: 'Negro',
+        codigo: '#000000',
+        imagenes: ['asset/img/chaqueta chicago negro.webp']
+      },
+      {
+        nombre: 'Dorado',
+        codigo: '#a07b17',
+        imagenes: ['asset/img/chaqueta chicago beach.webp']
+      },
+      {
+        nombre: 'Verde',
+        codigo: '#0a793c',
+        imagenes: ['asset/img/chaqueta chicago verde.webp']
+      }
+    ]
+  },
+  {
+    id: 8,
+    nombre: 'Beisbolera',
+    precio: 180000,
+    descripcion: 'Beisbolera de alta calidad con diseño moderno y ajuste perfecto',
+    tiempoEntrega: '3-5 días hábiles',
+    colores: [
+      {
+        nombre: 'Azul Claro',
+        codigo: '#ADD8E6',
+        imagenes: ['/asset/img/Beisbolera azul clarito.webp']
+      },
+      {
+        nombre: 'Morado',
+        codigo: '#800080',
+        imagenes: ['/asset/img/Beisbolera Morado.webp']
+      },
+      {
+        nombre: 'Negro',
+        codigo: '#000000',
+        imagenes: ['/asset/img/Beisbolera negro.webp']
+      },
+      {
+        nombre: 'Rojo',
+        codigo: '#FF0000',
+        imagenes: ['/asset/img/Beisbolera Roja.webp']
+      },
+      {
+        nombre: 'Verde',
+        codigo: '#0a793c',
+        imagenes: ['/asset/img/Beisbolera verde.webp']
+      },
+      {
+        nombre: 'Azul Oscuro',
+        codigo: '#00008B',
+        imagenes: ['/asset/img/Beisbolera azul.webp']
+      }
+    ]
+  },
+  {
+    id: 9,
+    nombre: 'Chaqueta Lakers',
+    precio: 240000,
+    descripcion: 'Chaqueta oficial de los Lakers, con diseño retro y detalles bordados.',
+    tiempoEntrega: '3-5 días hábiles',
+    colores: [
+      {
+        nombre: 'Blanco',
+        codigo: '#ffffff',
+        imagenes: ['/asset/img/Lakers Blanco.jpeg']
+      },
+      {
+        nombre: 'Amarillo',
+        codigo: '#FDB927',
+        imagenes: ['/asset/img/LAKERS AMARILLO.jpg']
+      },
+      {
+        nombre: 'Morado',
+        codigo: '#e100ff',
+        imagenes: ['/asset/img/LAKERS MORADO.jpg']
+      },
+      {
+        nombre: 'Negro',
+        codigo: '#000000',
+        imagenes: ['/asset/img/LAKERS NEGRO.jpg']
+      }
+    ]
+  },
+   {
+    id: 10,
+    nombre: 'Chaqueta BetSport',
+    precio: 170000,
+    descripcion: 'Camiseta deportiva edición especial BetSport',
+    tiempoEntrega: '2-4 días hábiles',
+    colores: [
+      {
+        nombre: 'Gris',
+        codigo: '#b8b9b4',
+        imagenes: [
+          'asset/img/chaqueta Bestsport gris.webp'
+        ]
+      },
+      {
+        nombre: 'Morado',
+        codigo: '#5932a1',
+        imagenes: [
+          'asset/img/chaqueta Bestsport morado.webp'
+        ]
+      },
+      {
+        nombre: 'Negro',
+        codigo: '#000000',
+        imagenes: [
+          'asset/img/chaqueta Bestsport negro.webp'
+        ]
+      }
+    ]
+  },
   ];
 
   getProductoPorId(id: number): Producto | undefined {

@@ -29,34 +29,12 @@
 
   <div class="product-container">
     <div class="product-images">
-    <div class="thumbnails">
-  <button 
-    class="thumbnail active"
-    aria-label="Vista principal"
-    tabindex="0"
-    onmouseenter="cambiarImagen('asset/img/Jordan retro 1 negro.jpeg')"
-    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan retro 1 negro.jpeg')">
-    <img src="asset/img/Jordan retro 1 negro.jpeg" alt="Vista principal">
-  </button>
-
-  <button 
-    class="thumbnail"
-    aria-label="Vista lateral"
-    tabindex="0"
-    onmouseenter="cambiarImagen('asset/img/Jordan retro 1 azul.jpeg')"
-    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan retro 1 azul.jpeg')">
-    <img src="asset/img/Jordan retro 1 azul.jpeg" alt="Vista lateral">
-  </button>
-
-  <button 
-    class="thumbnail"
-    aria-label="Vista detalle"
-    tabindex="0"
-    onmouseenter="cambiarImagen('asset/img/Jordan retro 1 verde.jpeg')"
-    onkeydown="if(event.key === 'Enter') cambiarImagen('asset/img/Jordan retro 1 verde.jpeg')">
-    <img src="asset/img/Jordan retro 1 verde.jpeg" alt="Vista detalle">
-  </button>
+    <div class="main-image">
+  <img [src]="imagenSeleccionada" class="imagen-principal" alt="Imagen principal" />
 </div>
+
+<app-thumbnails [imagenes]="imagenesJordan" (cambio)="cambiarImagen($event)"></app-thumbnails>
+
 
       <div class="main-image">
         <img id="mainImage" class="img-full" src="asset/img/Jordan retro 1 azul.jpeg" alt="Air Max 90">

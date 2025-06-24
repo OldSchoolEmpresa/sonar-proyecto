@@ -17,7 +17,6 @@ class PanelController extends Controller
         }
 
         ob_start();
-        require_once $rutaCompleta;
         $contenido = ob_get_clean();
 
         return response($contenido, 200)

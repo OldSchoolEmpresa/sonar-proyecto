@@ -32,17 +32,16 @@ export class VentasGenericoComponent implements OnInit {
       email: ''
     }
   };
-
   constructor(
-    private route: ActivatedRoute,
-    private productosService: ProductosService,
-    private http: HttpClient,
-    private router: Router
+    private readonly ruta: ActivatedRoute,
+    private readonly productosServicio: ProductosService,
+    private readonly http: HttpClient,
+    private readonly router: Router
   ) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    const productoEncontrado = this.productosService.getProductoPorId(id);
+    const id = Number(this.ruta.snapshot.paramMap.get('id'));
+    const productoEncontrado = this.productosServicio.getProductoPorId(id);
 
     if (!productoEncontrado) {
       Swal.fire('Error', 'Producto no encontrado', 'error');

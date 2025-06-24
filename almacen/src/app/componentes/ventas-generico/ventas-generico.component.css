@@ -1,0 +1,219 @@
+.ventas-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+h2, h3, h4 {
+  margin-bottom: 1rem;
+}
+
+.producto-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.imagen-container {
+  flex: 1 1 300px;
+  text-align: center;
+  position: relative;
+}
+
+.imagen-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.puntos-navegacion {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.selector-imagen {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #bbb;
+  border: none;
+  cursor: pointer;
+}
+
+.selector-imagen.activo {
+  background: #000;
+}
+
+.detalle-producto {
+  flex: 1 1 300px;
+}
+
+.color-tag {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.opciones-color .colores-disponibles {
+  display: flex;
+  gap: 8px;
+  margin: 0.5rem 0 1rem;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  position: relative;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.color-option.selected {
+  border: 2px solid #000;
+}
+
+.check-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.7rem;
+}
+
+.opciones {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.opciones label {
+  font-weight: 600;
+}
+
+.opciones select,
+.opciones input[type="number"] {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 100px;
+}
+
+.btn-continuar {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-continuar:hover {
+  background-color: #333;
+}
+
+/* CONFIRMACIÓN */
+.confirmacion-pedido {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.confirmacion-pedido img {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.resumen-producto,
+.info-entrega,
+.datos-usuario {
+  margin-bottom: 2rem;
+}
+
+.datos-usuario label {
+  font-weight: bold;
+}
+
+.datos-usuario input {
+  display: block;
+  margin: 0.3rem 0 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 400px;
+}
+
+.acciones {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.acciones button {
+  padding: 0.7rem 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.acciones button:first-child {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.acciones button:first-child:hover {
+  background-color: #c0c0c0;
+}
+
+.acciones .confirmar {
+  background-color: #000;
+  color: #fff;
+}
+
+.acciones .confirmar:hover {
+  background-color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .producto-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .opciones {
+    flex-direction: column;
+  }
+
+  .acciones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
